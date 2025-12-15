@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start Practice - JEE Physics Practice</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #000;
+            color: #fff;
+            line-height: 1.6;
+            padding: 20px;
+            margin: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        .subheading {
+            text-align: center;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            color: #ccc;
+        }
+        .practice-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        .card {
+            background-color: #111;
+            padding: 2rem;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            background-color: #222;
+        }
+        .card h3 {
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        .practice-mode {
+            text-align: center;
+        }
+        .practice-mode h2 {
+            margin-bottom: 2rem;
+            font-size: 1.5rem;
+        }
+        .mode-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .btn.primary {
+            background-color: #fff;
+            color: #000;
+        }
+        .btn.primary:hover {
+            background-color: #ccc;
+            transform: scale(1.05);
+        }
+        .btn.secondary {
+            background-color: transparent;
+            color: #fff;
+            border: 1px solid #fff;
+        }
+        .btn.secondary:hover {
+            background-color: #fff;
+            color: #000;
+            transform: scale(1.05);
+        }
+        .chapter-wise-section {
+            margin-top: 3rem;
+        }
+        .chapter-wise-section h2 {
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+        }
+        .chapter-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        @media (max-width: 768px) {
+            .practice-cards {
+                grid-template-columns: 1fr;
+            }
+            .chapter-cards {
+                grid-template-columns: 1fr;
+            }
+            .mode-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Start Practice – JEE Physics</h1>
+        <p class="subheading">Choose a topic and start solving exam-level MCQs</p>
+
+        <div class="practice-cards">
+            <div class="card" id="mechanics">
+                <h3>Mechanics</h3>
+            </div>
+            <div class="card" id="thermodynamics">
+                <h3>Thermodynamics</h3>
+            </div>
+            <div class="card" id="electrodynamics">
+                <h3>Electrodynamics</h3>
+            </div>
+            <div class="card" id="modern-physics">
+                <h3>Modern Physics</h3>
+            </div>
+        </div>
+
+        <div class="chapter-wise-section">
+            <h2>Class 11 Physics – Chapter-wise Practice</h2>
+            <div class="chapter-cards">
+                <div class="card" id="units-dimensions">
+                    <h3>Units and Dimensions</h3>
+                </div>
+                <div class="card" id="motion-straight-line">
+                    <h3>Motion in a Straight Line</h3>
+                </div>
+                <div class="card" id="motion-plane">
+                    <h3>Motion in a Plane</h3>
+                </div>
+                <div class="card" id="laws-of-motion">
+                    <h3>Laws of Motion</h3>
+                </div>
+                <div class="card" id="work-energy-power">
+                    <h3>Work, Energy and Power</h3>
+                </div>
+                <div class="card" id="rotation">
+                    <h3>System of Particles and Rotational Motion</h3>
+                </div>
+                <div class="card" id="gravitation">
+                    <h3>Gravitation</h3>
+                </div>
+                <div class="card" id="mechanical-solids">
+                    <h3>Mechanical Properties of Solids</h3>
+                </div>
+                <div class="card" id="mechanical-fluids">
+                    <h3>Mechanical Properties of Fluids</h3>
+                </div>
+                <div class="card" id="thermal-properties">
+                    <h3>Thermal Properties of Matter</h3>
+                </div>
+                <div class="card" id="kinetic-theory">
+                    <h3>Kinetic Theory</h3>
+                </div>
+                <div class="card" id="oscillations">
+                    <h3>Oscillations</h3>
+                </div>
+                <div class="card" id="waves">
+                    <h3>Waves</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="practice-mode">
+            <h2>Practice Mode</h2>
+            <div class="mode-buttons">
+                <button class="btn primary" id="chapter-wise">Chapter-wise Practice</button>
+                <button class="btn secondary" id="mock-test">Full Length Mock Test</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // script.js for practice.html - Handles navigation and interactions
+
+        // Existing card clicks for topic navigation
+        const mechanicsCard = document.getElementById('mechanics');
+        const thermodynamicsCard = document.getElementById('thermodynamics');
+        const electrodynamicsCard = document.getElementById('electrodynamics');
+        const modernPhysicsCard = document.getElementById('modern-physics');
+
+        mechanicsCard.addEventListener('click', () => {
+            window.location.href = 'mechanics.html'; // Navigate to mechanics.html
+        });
+
+        thermodynamicsCard.addEventListener('click', () => {
+            window.location.href = 'thermodynamics.html'; // Navigate to thermodynamics.html
+        });
+
+        electrodynamicsCard.addEventListener('click', () => {
+            window.location.href = 'electrodynamics.html'; // Navigate to electrodynamics.html
+        });
+
+        modernPhysicsCard.addEventListener('click', () => {
+            window.location.href = 'modern.html'; // Navigate to modern.html
+        });
+
+        // New chapter-wise card clicks
+        const unitsDimensionsCard = document.getElementById('units-dimensions');
+        const motionStraightLineCard = document.getElementById('motion-straight-line');
+        const motionPlaneCard = document.getElementById('motion-plane');
+        const lawsOfMotionCard = document.getElementById('laws-of-motion');
+        const workEnergyPowerCard = document.getElementById('work-energy-power');
+        const rotationCard = document.getElementById('rotation');
+        const gravitationCard = document.getElementById('gravitation');
+        const mechanicalSolidsCard = document.getElementById('mechanical-solids');
+        const mechanicalFluidsCard = document.getElementById('mechanical-fluids');
+        const thermalPropertiesCard = document.getElementById('thermal-properties');
+        const kineticTheoryCard = document.getElementById('kinetic-theory');
+        const oscillationsCard = document.getElementById('oscillations');
+        const wavesCard = document.getElementById('waves');
+
+        unitsDimensionsCard.addEventListener('click', () => {
+            window.location.href = 'units-dimensions.html'; // Navigate to units-dimensions.html
+        });
+
+        motionStraightLineCard.addEventListener('click', () => {
+            window.location.href = 'motion-straight-line.html'; // Navigate to motion-straight-line.html
+        });
+
+        motionPlaneCard.addEventListener('click', () => {
+            window.location.href = 'motion-plane.html'; // Navigate to motion-plane.html
+        });
+
+        lawsOfMotionCard.addEventListener('click', () => {
+            window.location.href = 'laws-of-motion.html'; // Navigate to laws-of-motion.html
+        });
+
+        workEnergyPowerCard.addEventListener('click', () => {
+            window.location.href = 'work-energy-power.html'; // Navigate to work-energy-power.html
+        });
+
+        rotationCard.addEventListener('click', () => {
+            window.location.href = 'rotation.html'; // Navigate to rotation.html
+        });
+
+        gravitationCard.addEventListener('click', () => {
+            window.location.href = 'gravitation.html'; // Navigate to gravitation.html
+        });
+
+        mechanicalSolidsCard.addEventListener('click', () => {
+            window.location.href = 'mechanical-solids.html'; // Navigate to mechanical-solids.html
+        });
+
+        mechanicalFluidsCard.addEventListener('click', () => {
+            window.location.href = 'mechanical-fluids.html'; // Navigate to mechanical-fluids.html
+        });
+
+        thermalPropertiesCard.addEventListener('click', () => {
+            window.location.href = 'thermal-properties.html'; // Navigate to thermal-properties.html
+        });
+
+        kineticTheoryCard.addEventListener('click', () => {
+            window.location.href = 'kinetic-theory.html'; // Navigate to kinetic-theory.html
+        });
+
+        oscillationsCard.addEventListener('click', () => {
+            window.location.href = 'oscillations.html'; // Navigate to oscillations.html
+        });
+
+        wavesCard.addEventListener('click', () => {
+            window.location.href = 'waves.html'; // Navigate to waves.html
+        });
+
+        // Existing button clicks for practice mode
+        const chapterWiseBtn = document.getElementById('chapter-wise');
+        const mockTestBtn = document.getElementById('mock-test');
+
+        chapterWiseBtn.addEventListener('click', () => {
+            // Smooth scroll to the practice cards section
+            document.querySelector('.practice-cards').scrollIntoView({ behavior: 'smooth' });
+        });
+
+        mockTestBtn.addEventListener('click', () => {
+            window.location.href = 'mocktest.html'; // Navigate to mocktest.html
+        });
+    </script>
+</body>
+</html>

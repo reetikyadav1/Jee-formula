@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thermodynamics - JEE Physics Practice</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #000;
+            color: #fff;
+            line-height: 1.6;
+            padding: 20px;
+            margin: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+        .question {
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background-color: #111;
+            border-radius: 5px;
+        }
+        .question h3 {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        .option {
+            display: flex;
+            align-items: center;
+        }
+        .option input {
+            margin-right: 0.5rem;
+        }
+        .check-btn {
+            background-color: #fff;
+            color: #000;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .check-btn:hover {
+            background-color: #ccc;
+        }
+        .result {
+            margin-top: 1rem;
+            font-weight: 500;
+        }
+        .correct {
+            color: #4CAF50; /* Green for correct */
+        }
+        .wrong {
+            color: #f44336; /* Red for wrong */
+        }
+        .highlight {
+            background-color: #4CAF50; /* Highlight correct option */
+            padding: 0.2rem;
+            border-radius: 3px;
+        }
+        .solution {
+            margin-top: 1rem;
+            padding: 1rem;
+            background-color: #222;
+            border-radius: 5px;
+            display: none; /* Hidden by default */
+        }
+        @media (max-width: 768px) {
+            .options {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Thermodynamics – JEE Practice</h1>
+
+        <!-- Question 1 -->
+        <div class="question">
+            <h3>1. In an isothermal process, the internal energy of an ideal gas:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q1" value="A"> A) Increases</label>
+                <label class="option"><input type="radio" name="q1" value="B"> B) Decreases</label>
+                <label class="option"><input type="radio" name="q1" value="C"> C) Remains constant</label>
+                <label class="option"><input type="radio" name="q1" value="D"> D) Depends on the gas</label>
+            </div>
+            <button class="check-btn" data-question="1">Check Answer</button>
+            <div class="result" id="result-1"></div>
+            <div class="solution" id="solution-1">
+                <strong>Solution:</strong> For an ideal gas, internal energy depends only on temperature. In an isothermal process, temperature is constant, so internal energy remains constant.
+            </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="question">
+            <h3>2. The work done in an adiabatic process is equal to:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q2" value="A"> A) Heat added</label>
+                <label class="option"><input type="radio" name="q2" value="B"> B) Change in internal energy</label>
+                <label class="option"><input type="radio" name="q2" value="C"> C) Zero</label>
+                <label class="option"><input type="radio" name="q2" value="D"> D) Change in enthalpy</label>
+            </div>
+            <button class="check-btn" data-question="2">Check Answer</button>
+            <div class="result" id="result-2"></div>
+            <div class="solution" id="solution-2">
+                <strong>Solution:</strong> In an adiabatic process, Q = 0, so from the first law (ΔU = Q - W), W = -ΔU.
+            </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="question">
+            <h3>3. For a Carnot engine operating between temperatures T1 and T2 (T1 > T2), the efficiency is:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q3" value="A"> A) (T1 - T2)/T1</label>
+                <label class="option"><input type="radio" name="q3" value="B"> B) T2/T1</label>
+                <label class="option"><input type="radio" name="q3" value="C"> C) 1 - T2/T1</label>
+                <label class="option"><input type="radio" name="q3" value="D"> D) T1/T2</label>
+            </div>
+            <button class="check-btn" data-question="3">Check Answer</button>
+            <div class="result" id="result-3"></div>
+            <div class="solution" id="solution-3">
+                <strong>Solution:</strong> Efficiency η = 1 - T2/T1 for a Carnot engine.
+            </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="question">
+            <h3>4. In a PV diagram, an isothermal process is represented by:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q4" value="A"> A) A straight line</label>
+                <label class="option"><input type="radio" name="q4" value="B"> B) A hyperbola</label>
+                <label class="option"><input type="radio" name="q4" value="C"> C) A parabola</label>
+                <label class="option"><input type="radio" name="q4" value="D"> D) A circle</label>
+            </div>
+            <button class="check-btn" data-question="4">Check Answer</button>
+            <div class="result" id="result-4"></div>
+            <div class="solution" id="solution-4">
+                <strong>Solution:</strong> For an ideal gas, PV = constant for isothermal, which is a hyperbola.
+            </div>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="question">
+            <h3>5. The first law of thermodynamics is a statement of:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q5" value="A"> A) Conservation of mass</label>
+                <label class="option"><input type="radio" name="q5" value="B"> B) Conservation of energy</label>
+                <label class="option"><input type="radio" name="q5" value="C"> C) Conservation of momentum</label>
+                <label class="option"><input type="radio" name="q5" value="D"> D) Conservation of charge</label>
+            </div>
+            <button class="check-btn" data-question="5">Check Answer</button>
+            <div class="result" id="result-5"></div>
+            <div class="solution" id="solution-5">
+                <strong>Solution:</strong> The first law states that energy is conserved: ΔU = Q - W.
+            </div>
+        </div>
+
+        <!-- Question 6 -->
+        <div class="question">
+            <h3>6. For an adiabatic expansion of an ideal gas, the temperature:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q6" value="A"> A) Increases</label>
+                <label class="option"><input type="radio" name="q6" value="B"> B) Decreases</label>
+                <label class="option"><input type="radio" name="q6" value="C"> C) Remains constant</label>
+                <label class="option"><input type="radio" name="q6" value="D"> D) Depends on the gas</label>
+            </div>
+            <button class="check-btn" data-question="6">Check Answer</button>
+            <div class="result" id="result-6"></div>
+            <div class="solution" id="solution-6">
+                <strong>Solution:</strong> In adiabatic expansion, work is done by the gas, so internal energy decreases, leading to a drop in temperature.
+            </div>
+        </div>
+
+        <!-- Question 7 -->
+        <div class="question">
+            <h3>7. The efficiency of a heat engine is given by:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q7" value="A"> A) W/Q_in</label>
+                <label class="option"><input type="radio" name="q7" value="B"> B) Q_out/W</label>
+                <label class="option"><input type="radio" name="q7" value="C"> C) Q_in/W</label>
+                <label class="option"><input type="radio" name="q7" value="D"> D) W/Q_out</label>
+            </div>
+            <button class="check-btn" data-question="7">Check Answer</button>
+            <div class="result" id="result-7"></div>
+            <div class="solution" id="solution-7">
+                <strong>Solution:</strong> Efficiency η = W/Q_in, where W is work output and Q_in is heat input.
+            </div>
+        </div>
+
+        <!-- Question 8 -->
+        <div class="question">
+            <h3>8. In a PV diagram, the area under the curve represents:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q8" value="A"> A) Heat added</label>
+                <label class="option"><input type="radio" name="q8" value="B"> B) Work done</label>
+                <label class="option"><input type="radio" name="q8" value="C"> C) Internal energy</label>
+                <label class="option"><input type="radio" name="q8" value="D"> D) Enthalpy</label>
+            </div>
+            <button class="check-btn" data-question="8">Check Answer</button>
+            <div class="result" id="result-8"></div>
+            <div class="solution" id="solution-8">
+                <strong>Solution:</strong> The area under the PV curve equals the work done on/by the system.
+            </div>
+        </div>
+
+        <!-- Question 9 -->
+        <div class="question">
+            <h3>9. For a monatomic ideal gas, the internal energy U is:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q9" value="A"> A) (3/2) nRT</label>
+                <label class="option"><input type="radio" name="q9" value="B"> B) (5/2) nRT</label>
+                <label class="option"><input type="radio" name="q9" value="C"> C) nRT</label>
+                <label class="option"><input type="radio" name="q9" value="D"> D) (1/2) nRT</label>
+            </div>
+            <button class="check-btn" data-question="9">Check Answer</button>
+            <div class="result" id="result-9"></div>
+            <div class="solution" id="solution-9">
+                <strong>Solution:</strong> For monatomic gas, U = (3/2) nRT.
+            </div>
+        </div>
+
+        <!-- Question 10 -->
+        <div class="question">
+            <h3>10. In an isobaric process, the work done is:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q10" value="A"> A) PΔV</label>
+                <label class="option"><input type="radio" name="q10" value="B"> B) nRT ln(V2/V1)</label>
+                <label class="option"><input type="radio" name="q10" value="C"> C) Zero</label>
+                <label class="option"><input type="radio" name="q10" value="D"> D) ΔU</label>
+            </div>
+            <button class="check-btn" data-question="10">Check Answer</button>
+            <div class="result" id="result-10"></div>
+            <div class="solution" id="solution-10">
+                <strong>Solution:</strong> Work done W = PΔV for isobaric process.
+            </div>
+        </div>
+
+        <!-- Question 11 -->
+        <div class="question">
+            <h3>11. The maximum efficiency of a heat engine is given by the Carnot cycle when:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q11" value="A"> A) It operates reversibly</label>
+                <label class="option"><input type="radio" name="q11" value="B"> B) It operates irreversibly</label>
+                <label class="option"><input type="radio" name="q11" value="C"> C) Heat is lost</label>
+                <label class="option"><input type="radio" name="q11" value="D"> D) Work is zero</label>
+            </div>
+            <button class="check-btn" data-question="11">Check Answer</button>
+            <div class="result" id="result-11"></div>
+            <div class="solution" id="solution-11">
+                <strong>Solution:</strong> Carnot efficiency is maximum for reversible operation.
+            </div>
+        </div>
+
+        <!-- Question 12 -->
+        <div class="question">
+            <h3>12. For an adiabatic process, the relation between P and V is:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q12" value="A"> A) PV = constant</label>
+                <label class="option"><input type="radio" name="q12" value="B"> B) PV^γ = constant</label>
+                <label class="option"><input type="radio" name="q12" value="C"> C) P/V = constant</label>
+                <label class="option"><input type="radio" name="q12" value="D"> D) V/T = constant</label>
+            </div>
+            <button class="check-btn" data-question="12">Check Answer</button>
+            <div class="result" id="result-12"></div>
+            <div class="solution" id="solution-12">
+                <strong>Solution:</strong> For adiabatic, TV^{γ-1} = constant, leading to PV^γ = constant.
+            </div>
+        </div>
+
+        <!-- Question 13 -->
+        <div class="question">
+            <h3>13. The work done by the system in a cyclic process is:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q13" value="A"> A) Zero</label>
+                <label class="option"><input type="radio" name="q13" value="B"> B) Equal to heat added</label>
+                <label class="option"><input type="radio" name="q13" value="C"> C) Area of the cycle</label>
+                <label class="option"><input type="radio" name="q13" value="D"> D) Change in internal energy</label>
+            </div>
+            <button class="check-btn" data-question="13">Check Answer</button>
+            <div class="result" id="result-13"></div>
+            <div class="solution" id="solution-13">
+                <strong>Solution:</strong> In a cyclic process, ΔU = 0, so W = Q_net, and it's the area enclosed in the PV diagram.

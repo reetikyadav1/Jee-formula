@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Units & Dimensions - JEE Physics Practice</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Additional styles for MCQ layout, consistent with other pages */
+        .question {
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background-color: #111;
+            border-radius: 5px;
+        }
+        .question h3 {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        .option {
+            display: flex;
+            align-items: center;
+        }
+        .option input {
+            margin-right: 0.5rem;
+        }
+        .check-btn {
+            background-color: #fff;
+            color: #000;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .check-btn:hover {
+            background-color: #ccc;
+        }
+        .result {
+            margin-top: 1rem;
+            font-weight: 500;
+        }
+        .correct {
+            color: #4CAF50; /* Green for correct */
+        }
+        .wrong {
+            color: #f44336; /* Red for wrong */
+        }
+        .highlight {
+            background-color: #4CAF50; /* Highlight correct option */
+            padding: 0.2rem;
+            border-radius: 3px;
+        }
+        .solution {
+            margin-top: 1rem;
+            padding: 1rem;
+            background-color: #222;
+            border-radius: 5px;
+            display: none; /* Hidden by default */
+        }
+        @media (max-width: 768px) {
+            .options {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Units & Dimensions – JEE Practice</h1>
+
+        <!-- Question 1 -->
+        <div class="question">
+            <h3>1. The SI unit of force is:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q1" value="A"> A) Newton</label>
+                <label class="option"><input type="radio" name="q1" value="B"> B) Joule</label>
+                <label class="option"><input type="radio" name="q1" value="C"> C) Watt</label>
+                <label class="option"><input type="radio" name="q1" value="D"> D) Pascal</label>
+            </div>
+            <button class="check-btn" data-question="1">Check Answer</button>
+            <div class="result" id="result-1"></div>
+            <div class="solution" id="solution-1">
+                <strong>Solution:</strong> Force is mass × acceleration, so unit is kg·m/s², called Newton.
+            </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="question">
+            <h3>2. Dimensional formula of energy is:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q2" value="A"> A) [M L² T⁻²]</label>
+                <label class="option"><input type="radio" name="q2" value="B"> B) [M L T⁻¹]</label>
+                <label class="option"><input type="radio" name="q2" value="C"> C) [M L² T⁻¹]</label>
+                <label class="option"><input type="radio" name="q2" value="D"> D) [M⁻¹ L³ T⁻²]</label>
+            </div>
+            <button class="check-btn" data-question="2">Check Answer</button>
+            <div class="result" id="result-2"></div>
+            <div class="solution" id="solution-2">
+                <strong>Solution:</strong> Energy = (1/2)mv², so [M L² T⁻²].
+            </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="question">
+            <h3>3. Which of the following is a fundamental unit?</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q3" value="A"> A) Joule</label>
+                <label class="option"><input type="radio" name="q3" value="B"> B) Kilogram</label>
+                <label class="option"><input type="radio" name="q3" value="C"> C) Newton</label>
+                <label class="option"><input type="radio" name="q3" value="D"> D) Watt</label>
+            </div>
+            <button class="check-btn" data-question="3">Check Answer</button>
+            <div class="result" id="result-3"></div>
+            <div class="solution" id="solution-3">
+                <strong>Solution:</strong> Kilogram is a fundamental unit (mass).
+            </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="question">
+            <h3>4. The dimensional formula of pressure is:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q4" value="A"> A) [M L⁻¹ T⁻²]</label>
+                <label class="option"><input type="radio" name="q4" value="B"> B) [M L T⁻²]</label>
+                <label class="option"><input type="radio" name="q4" value="C"> C) [M⁻¹ L³ T⁻²]</label>
+                <label class="option"><input type="radio" name="q4" value="D"> D) [M L² T⁻²]</label>
+            </div>
+            <button class="check-btn" data-question="4">Check Answer</button>
+            <div class="result" id="result-4"></div>
+            <div class="solution" id="solution-4">
+                <strong>Solution:</strong> Pressure = Force/Area = [M L T⁻²]/[L²] = [M L⁻¹ T⁻²].
+            </div>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="question">
+            <h3>5. In dimensional analysis, the principle of homogeneity states:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q5" value="A"> A) Dimensions must be same on both sides</label>
+                <label class="option"><input type="radio" name="q5" value="B"> B) Units must be same</label>
+                <label class="option"><input type="radio" name="q5" value="C"> C) Constants are dimensionless</label>
+                <label class="option"><input type="radio" name="q5" value="D"> D) Errors are negligible</label>
+            </div>
+            <button class="check-btn" data-question="5">Check Answer</button>
+            <div class="result" id="result-5"></div>
+            <div class="solution" id="solution-5">
+                <strong>Solution:</strong> Dimensions of all terms in an equation must be identical.
+            </div>
+        </div>
+
+        <!-- Question 6 -->
+        <div class="question">
+            <h3>6. The number of significant figures in 0.00123 is:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q6" value="A"> A) 2</label>
+                <label class="option"><input type="radio" name="q6" value="B"> B) 3</label>
+                <label class="option"><input type="radio" name="q6" value="C"> C) 4</label>
+                <label class="option"><input type="radio" name="q6" value="D"> D) 5</label>
+            </div>
+            <button class="check-btn" data-question="6">Check Answer</button>
+            <div class="result" id="result-6"></div>
+            <div class="solution" id="solution-6">
+                <strong>Solution:</strong> Leading zeros are not significant; 1,2,3 are significant, so 3.
+            </div>
+        </div>
+
+        <!-- Question 7 -->
+        <div class="question">
+            <h3>7. Which equation is dimensionally correct? (v=velocity, t=time)</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q7" value="A"> A) s = vt</label>
+                <label class="option"><input type="radio" name="q7" value="B"> B) s = v²t</label>
+                <label class="option"><input type="radio" name="q7" value="C"> C) s = v/t</label>
+                <label class="option"><input type="radio" name="q7" value="D"> D) s = v t²</label>
+            </div>
+            <button class="check-btn" data-question="7">Check Answer</button>
+            <div class="result" id="result-7"></div>
+            <div class="solution" id="solution-7">
+                <strong>Solution:</strong> s = vt has [L] = [L T⁻¹][T], correct.
+            </div>
+        </div>
+
+        <!-- Question 8 -->
+        <div class="question">
+            <h3>8. The unit of coefficient of viscosity is:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q8" value="A"> A) Pa·s</label>
+                <label class="option"><input type="radio" name="q8" value="B"> B) N/m²</label>
+                <label class="option"><input type="radio" name="q8" value="C"> C) kg/m³</label>
+                <label class="option"><input type="radio" name="q8" value="D"> D) m/s</label>
+            </div>
+            <button class="check-btn" data-question="8">Check Answer</button>
+            <div class="result" id="result-8"></div>
+            <div class="solution" id="solution-8">
+                <strong>Solution:</strong> Viscosity η = F/(A dv/dx), unit Pa·s.
+            </div>
+        </div>
+
+        <!-- Question 9 -->
+        <div class="question">
+            <h3>9. In error analysis, absolute error is:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q9" value="A"> A) Δx / x</label>
+                <label class="option"><input type="radio" name="q9" value="B"> B) Δx</label>
+                <label class="option"><input type="radio" name="q9" value="C"> C) x / Δx</label>
+                <label class="option"><input type="radio" name="q9" value="D"> D) √(Δx)</label>
+            </div>
+            <button class="check-btn" data-question="9">Check Answer</button>
+            <div class="result" id="result-9"></div>
+            <div class="solution" id="solution-9">
+                <strong>Solution:</strong> Absolute error is the difference Δx.
+            </div>
+        </div>
+
+        <!-- Question 10 -->
+        <div class="question">
+            <h3>10. Convert 1 km/h to m/s:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q10" value="A"> A) 0.278 m/s</label>
+                <label class="option"><input type="radio" name="q10" value="B"> B) 3.6 m/s</label>
+                <label class="option"><input type="radio" name="q10" value="C"> C) 1 m/s</label>
+                <label class="option"><input type="radio" name="q10" value="D"> D) 1000 m/s</label>
+            </div>
+            <button class="check-btn" data-question="10">Check Answer</button>
+            <div class="result" id="result-10"></div>
+            <div class="solution" id="solution-10">
+                <strong>Solution:</strong> 1 km/h = 1000m / 3600s = 5/18 ≈ 0.278 m/s.
+            </div>
+        </div>
+
+        <!-- Question 11 -->
+        <div class="question">
+            <h3>11. Dimensional formula of Planck's constant is:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q11" value="A"> A) [M L² T⁻¹]</label>
+                <label class="option"><input type="radio" name="q11" value="B"> B) [M L T⁻¹]</label>
+                <label class="option"><input type="radio" name="q11" value="C"> C) [M L² T⁻²]</label>
+                <label class="option"><input type="radio" name="q11" value="D"> D) [M⁻¹ L³ T⁻²]</label>
+            </div>
+            <button class="check-btn" data-question="11">Check Answer</button>
+            <div class="result" id="result-11"></div>
+            <div class="solution" id="solution-11">
+                <strong>Solution:</strong> h = E/f, E = [M L² T⁻²], f = [T⁻¹], so [M L² T⁻¹].
+            </div>
+        </div>
+
+        <!-- Question 12 -->
+        <div class="question">
+            <h3>12. The least count of a vernier caliper is:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q12" value="A"> A) 0.1 mm</label>
+                <label class="option"><input type="radio" name="q12" value="B"> B) 0.01 mm</label>
+                <label class="option"><input type="radio" name="q12" value="C"> C) 1 mm</label>
+                <label class="option"><input type="radio" name="q12" value="D"> D) 0.001 mm</label>
+            </div>
+            <button class="check-btn" data-question="12">Check Answer</button>
+            <div class="result" id="result-12"></div>
+            <div class="solution" id="solution-12">
+                <strong>Solution:</strong> Typically 0.01 mm for standard vernier.
+            </div>
+        </div>
+
+        <!-- Question 13 -->
+        <div class="question">
+            <h3>13. Which is not a fundamental quantity?</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q13" value="A"> A) Length</label>
+                <label class="option"><input type="radio" name="q13" value="B"> B) Mass</label>
+                <label class="option"><input type="radio" name="q13" value="C"> C) Time</label>
+                <label class="option"><input type="radio" name="q13" value="D"> D) Velocity</label>
+            </div>
+            <button class="check-btn" data-question="13">Check Answer</button>
+            <div class="result" id="result-13"></div>
+            <div class="solution" id="solution-13">
+                <strong>Solution:</strong> Velocity is derived (length/time).
+            </div>
+        </div>
+
+        <!-- Question 14 -->
+        <div class="question">
+            <h3>14. Relative error in measurement is:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q14" value="A"> A) Δx</label>
+                <label class="option"><input type="radio" name="q14" value="B"> B) Δx / x</label>
+                <label class="option"><input type="radio" name="q14" value="

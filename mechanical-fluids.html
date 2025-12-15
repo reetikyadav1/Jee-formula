@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mechanical Properties of Fluids - JEE Physics Practice</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Additional styles for MCQ layout, consistent with other pages */
+        .question {
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background-color: #111;
+            border-radius: 5px;
+        }
+        .question h3 {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        .option {
+            display: flex;
+            align-items: center;
+        }
+        .option input {
+            margin-right: 0.5rem;
+        }
+        .check-btn {
+            background-color: #fff;
+            color: #000;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .check-btn:hover {
+            background-color: #ccc;
+        }
+        .result {
+            margin-top: 1rem;
+            font-weight: 500;
+        }
+        .correct {
+            color: #4CAF50; /* Green for correct */
+        }
+        .wrong {
+            color: #f44336; /* Red for wrong */
+        }
+        .highlight {
+            background-color: #4CAF50; /* Highlight correct option */
+            padding: 0.2rem;
+            border-radius: 3px;
+        }
+        .solution {
+            margin-top: 1rem;
+            padding: 1rem;
+            background-color: #222;
+            border-radius: 5px;
+            display: none; /* Hidden by default */
+        }
+        @media (max-width: 768px) {
+            .options {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Mechanical Properties of Fluids – JEE Practice</h1>
+
+        <!-- Question 1 -->
+        <div class="question">
+            <h3>1. Pressure in a fluid is:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q1" value="A"> A) Force per unit area</label>
+                <label class="option"><input type="radio" name="q1" value="B"> B) Area per unit force</label>
+                <label class="option"><input type="radio" name="q1" value="C"> C) Force times area</label>
+                <label class="option"><input type="radio" name="q1" value="D"> D) Force divided by volume</label>
+            </div>
+            <button class="check-btn" data-question="1">Check Answer</button>
+            <div class="result" id="result-1"></div>
+            <div class="solution" id="solution-1">
+                <strong>Solution:</strong> P = F/A.
+            </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="question">
+            <h3>2. Pascal's law states:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q2" value="A"> A) Pressure is same in all directions</label>
+                <label class="option"><input type="radio" name="q2" value="B"> B) Pressure decreases with depth</label>
+                <label class="option"><input type="radio" name="q2" value="C"> C) Pressure is zero at surface</label>
+                <label class="option"><input type="radio" name="q2" value="D"> D) Pressure depends on area</label>
+            </div>
+            <button class="check-btn" data-question="2">Check Answer</button>
+            <div class="result" id="result-2"></div>
+            <div class="solution" id="solution-2">
+                <strong>Solution:</strong> Pressure applied to enclosed fluid is transmitted equally.
+            </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="question">
+            <h3>3. Bernoulli's theorem relates:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q3" value="A"> A) Pressure and velocity</label>
+                <label class="option"><input type="radio" name="q3" value="B"> B) Pressure and density</label>
+                <label class="option"><input type="radio" name="q3" value="C"> C) Velocity and density</label>
+                <label class="option"><input type="radio" name="q3" value="D"> D) Pressure and temperature</label>
+            </div>
+            <button class="check-btn" data-question="3">Check Answer</button>
+            <div class="result" id="result-3"></div>
+            <div class="solution" id="solution-3">
+                <strong>Solution:</strong> P + (1/2)ρv² + ρgh = constant.
+            </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="question">
+            <h3>4. Viscosity is:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q4" value="A"> A) Internal friction</label>
+                <label class="option"><input type="radio" name="q4" value="B"> B) External friction</label>
+                <label class="option"><input type="radio" name="q4" value="C"> C) Surface tension</label>
+                <label class="option"><input type="radio" name="q4" value="D"> D) Capillary action</label>
+            </div>
+            <button class="check-btn" data-question="4">Check Answer</button>
+            <div class="result" id="result-4"></div>
+            <div class="solution" id="solution-4">
+                <strong>Solution:</strong> Viscosity opposes relative motion between layers.
+            </div>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="question">
+            <h3>5. Surface tension is:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q5" value="A"> A) Force per unit length</label>
+                <label class="option"><input type="radio" name="q5" value="B"> B) Force per unit area</label>
+                <label class="option"><input type="radio" name="q5" value="C"> C) Energy per unit area</label>
+                <label class="option"><input type="radio" name="q5" value="D"> D) Both A and C</label>
+            </div>
+            <button class="check-btn" data-question="5">Check Answer</button>
+            <div class="result" id="result-5"></div>
+            <div class="solution" id="solution-5">
+                <strong>Solution:</strong> Surface tension = force/length = energy/area.
+            </div>
+        </div>
+
+        <!-- Question 6 -->
+        <div class="question">
+            <h3>6. In a Venturi meter, pressure is:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q6" value="A"> A) Higher at narrow section</label>
+                <label class="option"><input type="radio" name="q6" value="B"> B) Lower at narrow section</label>
+                <label class="option"><input type="radio" name="q6" value="C"> C) Same everywhere</label>
+                <label class="option"><input type="radio" name="q6" value="D"> D) Zero at narrow section</label>
+            </div>
+            <button class="check-btn" data-question="6">Check Answer</button>
+            <div class="result" id="result-6"></div>
+            <div class="solution" id="solution-6">
+                <strong>Solution:</strong> Velocity higher, pressure lower at constriction.
+            </div>
+        </div>
+
+        <!-- Question 7 -->
+        <div class="question">
+            <h3>7. Coefficient of viscosity η has units:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q7" value="A"> A) Pa·s</label>
+                <label class="option"><input type="radio" name="q7" value="B"> B) N/m</label>
+                <label class="option"><input type="radio" name="q7" value="C"> C) J/m²</label>
+                <label class="option"><input type="radio" name="q7" value="D"> D) kg/m³</label>
+            </div>
+            <button class="check-btn" data-question="7">Check Answer</button>
+            <div class="result" id="result-7"></div>
+            <div class="solution" id="solution-7">
+                <strong>Solution:</strong> η = F/(A dv/dx), unit Pa·s.
+            </div>
+        </div>
+
+        <!-- Question 8 -->
+        <div class="question">
+            <h3>8. Capillary rise h =:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q8" value="A"> A) 2T/(ρ g r)</label>
+                <label class="option"><input type="radio" name="q8" value="B"> B) T/(ρ g r)</label>
+                <label class="option"><input type="radio" name="q8" value="C"> C) 4T/(ρ g r)</label>
+                <label class="option"><input type="radio" name="q8" value="D"> D) T/(2 ρ g r)</label>
+            </div>
+            <button class="check-btn" data-question="8">Check Answer</button>
+            <div class="result" id="result-8"></div>
+            <div class="solution" id="solution-8">
+                <strong>Solution:</strong> h = 2T cosθ /(ρ g r).
+            </div>
+        </div>
+
+        <!-- Question 9 -->
+        <div class="question">
+            <h3>9. Reynolds number Re =:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q9" value="A"> A) ρ v L / η</label>
+                <label class="option"><input type="radio" name="q9" value="B"> B) η / (ρ v L)</label>
+                <label class="option"><input type="radio" name="q9" value="C"> C) ρ v / η</label>
+                <label class="option"><input type="radio" name="q9" value="D"> D) η ρ v L</label>
+            </div>
+            <button class="check-btn" data-question="9">Check Answer</button>
+            <div class="result" id="result-9"></div>
+            <div class="solution" id="solution-9">
+                <strong>Solution:</strong> Re = ρ v L / η.
+            </div>
+        </div>
+
+        <!-- Question 10 -->
+        <div class="question">
+            <h3>10. Hydraulic lift works on:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q10" value="A"> A) Bernoulli's theorem</label>
+                <label class="option"><input type="radio" name="q10" value="B"> B) Pascal's law</label>
+                <label class="option"><input type="radio" name="q10" value="C"> C) Archimedes principle</label>
+                <label class="option"><input type="radio" name="q10" value="D"> D) Viscosity</label>
+            </div>
+            <button class="check-btn" data-question="10">Check Answer</button>
+            <div class="result" id="result-10"></div>
+            <div class="solution" id="solution-10">
+                <strong>Solution:</strong> Pressure transmitted equally in fluids.
+            </div>
+        </div>
+
+        <!-- Question 11 -->
+        <div class="question">
+            <h3>11. Stoke's law F =:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q11" value="A"> A) 6πη r v</label>
+                <label class="option"><input type="radio" name="q11" value="B"> B) 4πη r v</label>
+                <label class="option"><input type="radio" name="q11" value="C"> C) 3πη r v</label>
+                <label class="option"><input type="radio" name="q11" value="D"> D) 2πη r v</label>
+            </div>
+            <button class="check-btn" data-question="11">Check Answer</button>
+            <div class="result" id="result-11"></div>
+            <div class="solution" id="solution-11">
+                <strong>Solution:</strong> F = 6πη r v for sphere.
+            </div>
+        </div>
+
+        <!-- Question 12 -->
+        <div class="question">
+            <h3>12. Terminal velocity is:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q12" value="A"> A) Maximum velocity</label>
+                <label class="option"><input type="radio" name="q12" value="B"> B) Initial velocity</label>
+                <label class="option"><input type="radio" name="q12" value="C"> C) Average velocity</label>
+                <label class="option"><input type="radio" name="q12" value="D"> D) Zero velocity</label>
+            </div>
+            <button class="check-btn" data-question="12">Check Answer</button>
+            <div class="result" id="result-12"></div>
+            <div class="solution" id="solution-12">
+                <strong>Solution:</strong> When drag = weight, velocity constant.
+            </div>
+        </div>
+
+        <!-- Question 13 -->
+        <div class="question">
+            <h3>13. Angle of contact for water is:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q13" value="A"> A) 0°</label>
+                <label class="option"><input type="radio" name="q13" value="B"> B) 90°</label>
+                <label class="option"><input type="radio" name="q13" value="C"> C) 180°</label>
+                <label class="option"><input type="radio" name="q13" value="D"> D) Acute</label>
+            </div>
+            <button class="check-btn" data-question="13">Check Answer</button>
+            <div class="result" id="result-13"></div>
+            <div class="solution" id="solution-13">
+                <strong>Solution:</strong> Acute angle for wetting liquids.
+            </div>
+        </div>
+
+        <!-- Question 14 -->
+        <div class="question">
+            <h3>14. Bernoulli's equation assumes:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q14" value="A"> A) Incompressible fluid</label>
+                <label class="option"><input type="radio" name="q14" value="B"> B) Steady flow</label>
+                <label class="option"><input type="radio" name="q14" value="C"> C) Non-viscous</label>
+                <label class="option"><input type="radio" name="q14" value="D"> D) All of the above</label>
+            </div>
+            <button class="check-btn" data-question="14">Check Answer</button>
+            <div class="result" id="result-14"></div>
+            <div class="solution" id="solution-14">
+                <strong>Solution:</strong> Ideal fluid, steady, incompressible, non-viscous.
+            </div>
+        </div>
+
+        <!-- Question 15 -->
+        <div class="question">
+            <h3>15. Pressure at depth h is:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q15" value="A"> A) P = P0 + ρgh</label>
+                <label class="option"><input type="radio

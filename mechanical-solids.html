@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mechanical Properties of Solids - JEE Physics Practice</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Additional styles for MCQ layout, consistent with other pages */
+        .question {
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background-color: #111;
+            border-radius: 5px;
+        }
+        .question h3 {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        .option {
+            display: flex;
+            align-items: center;
+        }
+        .option input {
+            margin-right: 0.5rem;
+        }
+        .check-btn {
+            background-color: #fff;
+            color: #000;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .check-btn:hover {
+            background-color: #ccc;
+        }
+        .result {
+            margin-top: 1rem;
+            font-weight: 500;
+        }
+        .correct {
+            color: #4CAF50; /* Green for correct */
+        }
+        .wrong {
+            color: #f44336; /* Red for wrong */
+        }
+        .highlight {
+            background-color: #4CAF50; /* Highlight correct option */
+            padding: 0.2rem;
+            border-radius: 3px;
+        }
+        .solution {
+            margin-top: 1rem;
+            padding: 1rem;
+            background-color: #222;
+            border-radius: 5px;
+            display: none; /* Hidden by default */
+        }
+        @media (max-width: 768px) {
+            .options {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Mechanical Properties of Solids – JEE Practice</h1>
+
+        <!-- Question 1 -->
+        <div class="question">
+            <h3>1. Stress is defined as:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q1" value="A"> A) Force per unit area</label>
+                <label class="option"><input type="radio" name="q1" value="B"> B) Area per unit force</label>
+                <label class="option"><input type="radio" name="q1" value="C"> C) Force times area</label>
+                <label class="option"><input type="radio" name="q1" value="D"> D) Force divided by length</label>
+            </div>
+            <button class="check-btn" data-question="1">Check Answer</button>
+            <div class="result" id="result-1"></div>
+            <div class="solution" id="solution-1">
+                <strong>Solution:</strong> Stress = F/A.
+            </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="question">
+            <h3>2. Strain is:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q2" value="A"> A) Change in length / original length</label>
+                <label class="option"><input type="radio" name="q2" value="B"> B) Force / area</label>
+                <label class="option"><input type="radio" name="q2" value="C"> C) Area / force</label>
+                <label class="option"><input type="radio" name="q2" value="D"> D) Length / force</label>
+            </div>
+            <button class="check-btn" data-question="2">Check Answer</button>
+            <div class="result" id="result-2"></div>
+            <div class="solution" id="solution-2">
+                <strong>Solution:</strong> Strain = ΔL/L.
+            </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="question">
+            <h3>3. Young's modulus Y =:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q3" value="A"> A) Stress / strain</label>
+                <label class="option"><input type="radio" name="q3" value="B"> B) Strain / stress</label>
+                <label class="option"><input type="radio" name="q3" value="C"> C) Stress × strain</label>
+                <label class="option"><input type="radio" name="q3" value="D"> D) Stress - strain</label>
+            </div>
+            <button class="check-btn" data-question="3">Check Answer</button>
+            <div class="result" id="result-3"></div>
+            <div class="solution" id="solution-3">
+                <strong>Solution:</strong> Y = stress / strain.
+            </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="question">
+            <h3>4. Bulk modulus K =:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q4" value="A"> A) -ΔP / (ΔV/V)</label>
+                <label class="option"><input type="radio" name="q4" value="B"> B) ΔP / (ΔV/V)</label>
+                <label class="option"><input type="radio" name="q4" value="C"> C) ΔV / ΔP</label>
+                <label class="option"><input type="radio" name="q4" value="D"> D) ΔP × ΔV</label>
+            </div>
+            <button class="check-btn" data-question="4">Check Answer</button>
+            <div class="result" id="result-4"></div>
+            <div class="solution" id="solution-4">
+                <strong>Solution:</strong> K = -ΔP / (ΔV/V).
+            </div>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="question">
+            <h3>5. Shear modulus η =:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q5" value="A"> A) Stress / shear strain</label>
+                <label class="option"><input type="radio" name="q5" value="B"> B) Shear strain / stress</label>
+                <label class="option"><input type="radio" name="q5" value="C"> C) Stress × shear strain</label>
+                <label class="option"><input type="radio" name="q5" value="D"> D) Stress - shear strain</label>
+            </div>
+            <button class="check-btn" data-question="5">Check Answer</button>
+            <div class="result" id="result-5"></div>
+            <div class="solution" id="solution-5">
+                <strong>Solution:</strong> η = stress / shear strain.
+            </div>
+        </div>
+
+        <!-- Question 6 -->
+        <div class="question">
+            <h3>6. In the elastic limit, stress is:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q6" value="A"> A) Proportional to strain</label>
+                <label class="option"><input type="radio" name="q6" value="B"> B) Inversely proportional</label>
+                <label class="option"><input type="radio" name="q6" value="C"> C) Constant</label>
+                <label class="option"><input type="radio" name="q6" value="D"> D) Zero</label>
+            </div>
+            <button class="check-btn" data-question="6">Check Answer</button>
+            <div class="result" id="result-6"></div>
+            <div class="solution" id="solution-6">
+                <strong>Solution:</strong> Hooke's law: stress ∝ strain.
+            </div>
+        </div>
+
+        <!-- Question 7 -->
+        <div class="question">
+            <h3>7. Poisson's ratio σ =:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q7" value="A"> A) Lateral strain / longitudinal strain</label>
+                <label class="option"><input type="radio" name="q7" value="B"> B) Longitudinal strain / lateral strain</label>
+                <label class="option"><input type="radio" name="q7" value="C"> C) Lateral strain × longitudinal strain</label>
+                <label class="option"><input type="radio" name="q7" value="D"> D) Lateral strain - longitudinal strain</label>
+            </div>
+            <button class="check-btn" data-question="7">Check Answer</button>
+            <div class="result" id="result-7"></div>
+            <div class="solution" id="solution-7">
+                <strong>Solution:</strong> σ = - (lateral strain) / (longitudinal strain).
+            </div>
+        </div>
+
+        <!-- Question 8 -->
+        <div class="question">
+            <h3>8. The yield point is:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q8" value="A"> A) Point of maximum stress</label>
+                <label class="option"><input type="radio" name="q8" value="B"> B) Point where plastic deformation starts</label>
+                <label class="option"><input type="radio" name="q8" value="C"> C) Point of fracture</label>
+                <label class="option"><input type="radio" name="q8" value="D"> D) Point of zero strain</label>
+            </div>
+            <button class="check-btn" data-question="8">Check Answer</button>
+            <div class="result" id="result-8"></div>
+            <div class="solution" id="solution-8">
+                <strong>Solution:</strong> Beyond yield point, deformation is permanent.
+            </div>
+        </div>
+
+        <!-- Question 9 -->
+        <div class="question">
+            <h3>9. Ductile materials have:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q9" value="A"> A) High yield strength</label>
+                <label class="option"><input type="radio" name="q9" value="B"> B) Large plastic deformation</label>
+                <label class="option"><input type="radio" name="q9" value="C"> C) Brittle fracture</label>
+                <label class="option"><input type="radio" name="q9" value="D"> D) Low elasticity</label>
+            </div>
+            <button class="check-btn" data-question="9">Check Answer</button>
+            <div class="result" id="result-9"></div>
+            <div class="solution" id="solution-9">
+                <strong>Solution:</strong> Ductile materials deform plastically before breaking.
+            </div>
+        </div>
+
+        <!-- Question 10 -->
+        <div class="question">
+            <h3>10. Breaking stress is:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q10" value="A"> A) Stress at yield point</label>
+                <label class="option"><input type="radio" name="q10" value="B"> B) Maximum stress material can withstand</label>
+                <label class="option"><input type="radio" name="q10" value="C"> C) Stress at elastic limit</label>
+                <label class="option"><input type="radio" name="q10" value="D"> D) Zero stress</label>
+            </div>
+            <button class="check-btn" data-question="10">Check Answer</button>
+            <div class="result" id="result-10"></div>
+            <div class="solution" id="solution-10">
+                <strong>Solution:</strong> Breaking stress is ultimate tensile strength.
+            </div>
+        </div>
+
+        <!-- Question 11 -->
+        <div class="question">
+            <h3>11. For steel, Young's modulus is:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q11" value="A"> A) 2×10^11 Pa</label>
+                <label class="option"><input type="radio" name="q11" value="B"> B) 7×10^10 Pa</label>
+                <label class="option"><input type="radio" name="q11" value="C"> C) 1×10^9 Pa</label>
+                <label class="option"><input type="radio" name="q11" value="D"> D) 5×10^8 Pa</label>
+            </div>
+            <button class="check-btn" data-question="11">Check Answer</button>
+            <div class="result" id="result-11"></div>
+            <div class="solution" id="solution-11">
+                <strong>Solution:</strong> Y ≈ 2×10^11 Pa for steel.
+            </div>
+        </div>
+
+        <!-- Question 12 -->
+        <div class="question">
+            <h3>12. In compression, strain is:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q12" value="A"> A) Positive</label>
+                <label class="option"><input type="radio" name="q12" value="B"> B) Negative</label>
+                <label class="option"><input type="radio" name="q12" value="C"> C) Zero</label>
+                <label class="option"><input type="radio" name="q12" value="D"> D) Infinite</label>
+            </div>
+            <button class="check-btn" data-question="12">Check Answer</button>
+            <div class="result" id="result-12"></div>
+            <div class="solution" id="solution-12">
+                <strong>Solution:</strong> Strain is negative for compression.
+            </div>
+        </div>
+
+        <!-- Question 13 -->
+        <div class="question">
+            <h3>13. The proportionality limit is:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q13" value="A"> A) Point of fracture</label>
+                <label class="option"><input type="radio" name="q13" value="B"> B) Point up to which Hooke's law holds</label>
+                <label class="option"><input type="radio" name="q13" value="C"> C) Point of maximum strain</label>
+                <label class="option"><input type="radio" name="q13" value="D"> D) Point of zero stress</label>
+            </div>
+            <button class="check-btn" data-question="13">Check Answer</button>
+            <div class="result" id="result-13"></div>
+            <div class="solution" id="solution-13">
+                <strong>Solution:</strong> Stress ∝ strain up to proportionality limit.
+            </div>
+        </div>
+
+        <!-- Question 14 -->
+        <div class="question">
+            <h3>14. For rubber, Young's modulus is:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q14" value="A"> A) High</label>
+                <label class="option"><input type="radio" name="q14" value="B"> B) Low</label>
+                <label class="option"><input type="radio" name="q14" value="C"> C) Zero</label>
+                <label class="option"><input type="radio" name="q14" value="D"> D) Infinite</label>
+            </div>
+            <button class="check-btn" data-question="14">Check Answer</button>
+            <div class="result" id="result-14"></div>
+            <div class="solution" id="solution-14">
+                <strong>Solution:</strong> Rubber has low Y, high elasticity.
+            </div>
+        </div>
+
+        <!-- Question 15 -->
+        <div class="question">
+            <h3>15. Stress-strain curve for brittle materials:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q15" value="A"> A) Has large plastic region</label>
+                <label class="option"><input type="radio" name="q15" value="B"> B

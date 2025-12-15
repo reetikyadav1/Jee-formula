@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electrodynamics - JEE Physics Practice</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #000;
+            color: #fff;
+            line-height: 1.6;
+            padding: 20px;
+            margin: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+        .question {
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background-color: #111;
+            border-radius: 5px;
+        }
+        .question h3 {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        .option {
+            display: flex;
+            align-items: center;
+        }
+        .option input {
+            margin-right: 0.5rem;
+        }
+        .check-btn {
+            background-color: #fff;
+            color: #000;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .check-btn:hover {
+            background-color: #ccc;
+        }
+        .result {
+            margin-top: 1rem;
+            font-weight: 500;
+        }
+        .correct {
+            color: #4CAF50; /* Green for correct */
+        }
+        .wrong {
+            color: #f44336; /* Red for wrong */
+        }
+        .highlight {
+            background-color: #4CAF50; /* Highlight correct option */
+            padding: 0.2rem;
+            border-radius: 3px;
+        }
+        .solution {
+            margin-top: 1rem;
+            padding: 1rem;
+            background-color: #222;
+            border-radius: 5px;
+            display: none; /* Hidden by default */
+        }
+        @media (max-width: 768px) {
+            .options {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Electrodynamics – JEE Practice</h1>
+
+        <!-- Question 1 -->
+        <div class="question">
+            <h3>1. The electric field due to a point charge q at a distance r is:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q1" value="A"> A) kq/r²</label>
+                <label class="option"><input type="radio" name="q1" value="B"> B) kq/r</label>
+                <label class="option"><input type="radio" name="q1" value="C"> C) kq²/r</label>
+                <label class="option"><input type="radio" name="q1" value="D"> D) k/r²</label>
+            </div>
+            <button class="check-btn" data-question="1">Check Answer</button>
+            <div class="result" id="result-1"></div>
+            <div class="solution" id="solution-1">
+                <strong>Solution:</strong> E = kq/r² for a point charge.
+            </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="question">
+            <h3>2. The capacitance of a parallel plate capacitor is:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q2" value="A"> A) ε₀A/d</label>
+                <label class="option"><input type="radio" name="q2" value="B"> B) ε₀A d</label>
+                <label class="option"><input type="radio" name="q2" value="C"> C) ε₀/d</label>
+                <label class="option"><input type="radio" name="q2" value="D"> D) A/d</label>
+            </div>
+            <button class="check-btn" data-question="2">Check Answer</button>
+            <div class="result" id="result-2"></div>
+            <div class="solution" id="solution-2">
+                <strong>Solution:</strong> C = ε₀A/d for parallel plates.
+            </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="question">
+            <h3>3. Ohm's law states that V is proportional to:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q3" value="A"> A) I</label>
+                <label class="option"><input type="radio" name="q3" value="B"> B) I²</label>
+                <label class="option"><input type="radio" name="q3" value="C"> C) 1/I</label>
+                <label class="option"><input type="radio" name="q3" value="D"> D) √I</label>
+            </div>
+            <button class="check-btn" data-question="3">Check Answer</button>
+            <div class="result" id="result-3"></div>
+            <div class="solution" id="solution-3">
+                <strong>Solution:</strong> V = IR, so V ∝ I.
+            </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="question">
+            <h3>4. The force on a current-carrying wire in a magnetic field is:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q4" value="A"> A) BIL sinθ</label>
+                <label class="option"><input type="radio" name="q4" value="B"> B) BIL</label>
+                <label class="option"><input type="radio" name="q4" value="C"> C) B I sinθ</label>
+                <label class="option"><input type="radio" name="q4" value="D"> D) B L sinθ</label>
+            </div>
+            <button class="check-btn" data-question="4">Check Answer</button>
+            <div class="result" id="result-4"></div>
+            <div class="solution" id="solution-4">
+                <strong>Solution:</strong> F = BIL sinθ.
+            </div>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="question">
+            <h3>5. Faraday's law of electromagnetic induction states:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q5" value="A"> A) ε = -dΦ/dt</label>
+                <label class="option"><input type="radio" name="q5" value="B"> B) ε = dΦ/dt</label>
+                <label class="option"><input type="radio" name="q5" value="C"> C) ε = Φ</label>
+                <label class="option"><input type="radio" name="q5" value="D"> D) ε = -Φ/dt</label>
+            </div>
+            <button class="check-btn" data-question="5">Check Answer</button>
+            <div class="result" id="result-5"></div>
+            <div class="solution" id="solution-5">
+                <strong>Solution:</strong> Induced emf ε = -dΦ_B/dt.
+            </div>
+        </div>
+
+        <!-- Question 6 -->
+        <div class="question">
+            <h3>6. In AC circuits, the rms value of current is:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q6" value="A"> A) I₀/√2</label>
+                <label class="option"><input type="radio" name="q6" value="B"> B) I₀</label>
+                <label class="option"><input type="radio" name="q6" value="C"> C) √2 I₀</label>
+                <label class="option"><input type="radio" name="q6" value="D"> D) I₀/2</label>
+            </div>
+            <button class="check-btn" data-question="6">Check Answer</button>
+            <div class="result" id="result-6"></div>
+            <div class="solution" id="solution-6">
+                <strong>Solution:</strong> I_rms = I₀/√2 for sinusoidal AC.
+            </div>
+        </div>
+
+        <!-- Question 7 -->
+        <div class="question">
+            <h3>7. Gauss's law relates electric flux to:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q7" value="A"> A) Charge enclosed</label>
+                <label class="option"><input type="radio" name="q7" value="B"> B) Electric field</label>
+                <label class="option"><input type="radio" name="q7" value="C"> C) Potential</label>
+                <label class="option"><input type="radio" name="q7" value="D"> D) Capacitance</label>
+            </div>
+            <button class="check-btn" data-question="7">Check Answer</button>
+            <div class="result" id="result-7"></div>
+            <div class="solution" id="solution-7">
+                <strong>Solution:</strong> ∫E·dA = q_enclosed/ε₀.
+            </div>
+        </div>
+
+        <!-- Question 8 -->
+        <div class="question">
+            <h3>8. The energy stored in a capacitor is:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q8" value="A"> A) (1/2) CV²</label>
+                <label class="option"><input type="radio" name="q8" value="B"> B) CV²</label>
+                <label class="option"><input type="radio" name="q8" value="C"> C) (1/2) QV</label>
+                <label class="option"><input type="radio" name="q8" value="D"> D) Q²/2C</label>
+            </div>
+            <button class="check-btn" data-question="8">Check Answer</button>
+            <div class="result" id="result-8"></div>
+            <div class="solution" id="solution-8">
+                <strong>Solution:</strong> U = (1/2) CV² = (1/2) QV = Q²/2C.
+            </div>
+        </div>
+
+        <!-- Question 9 -->
+        <div class="question">
+            <h3>9. Kirchhoff's first law is based on:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q9" value="A"> A) Conservation of charge</label>
+                <label class="option"><input type="radio" name="q9" value="B"> B) Conservation of energy</label>
+                <label class="option"><input type="radio" name="q9" value="C"> C) Ohm's law</label>
+                <label class="option"><input type="radio" name="q9" value="D"> D) Faraday's law</label>
+            </div>
+            <button class="check-btn" data-question="9">Check Answer</button>
+            <div class="result" id="result-9"></div>
+            <div class="solution" id="solution-9">
+                <strong>Solution:</strong> Junction rule: ΣI_in = ΣI_out.
+            </div>
+        </div>
+
+        <!-- Question 10 -->
+        <div class="question">
+            <h3>10. The magnetic field inside a solenoid is:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q10" value="A"> A) μ₀nI</label>
+                <label class="option"><input type="radio" name="q10" value="B"> B) μ₀nI/2</label>
+                <label class="option"><input type="radio" name="q10" value="C"> C) μ₀I</label>
+                <label class="option"><input type="radio" name="q10" value="D"> D) μ₀n²I</label>
+            </div>
+            <button class="check-btn" data-question="10">Check Answer</button>
+            <div class="result" id="result-10"></div>
+            <div class="solution" id="solution-10">
+                <strong>Solution:</strong> B = μ₀nI for infinite solenoid.
+            </div>
+        </div>
+
+        <!-- Question 11 -->
+        <div class="question">
+            <h3>11. Lenz's law is a consequence of:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q11" value="A"> A) Conservation of energy</label>
+                <label class="option"><input type="radio" name="q11" value="B"> B) Conservation of momentum</label>
+                <label class="option"><input type="radio" name="q11" value="C"> C) Conservation of charge</label>
+                <label class="option"><input type="radio" name="q11" value="D"> D) Ohm's law</label>
+            </div>
+            <button class="check-btn" data-question="11">Check Answer</button>
+            <div class="result" id="result-11"></div>
+            <div class="solution" id="solution-11">
+                <strong>Solution:</strong> Induced current opposes the change, conserving energy.
+            </div>
+        </div>
+
+        <!-- Question 12 -->
+        <div class="question">
+            <h3>12. In series AC circuit, impedance Z is:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q12" value="A"> A) √(R² + (X_L - X_C)²)</label>
+                <label class="option"><input type="radio" name="q12" value="B"> B) R + X_L + X_C</label>
+                <label class="option"><input type="radio" name="q12" value="C"> C) R² + (X_L - X_C)²</label>
+                <label class="option"><input type="radio" name="q12" value="D"> D) √(R² + X_L² + X_C²)</label>
+            </div>
+            <button class="check-btn" data-question="12">Check Answer</button>
+            <div class="result" id="result-12"></div>
+            <div class="solution" id="solution-12">
+                <strong>Solution:</strong> Z = √(R² + (X_L - X_C)²).
+            </div>
+        </div>
+
+        <!-- Question 13 -->
+        <div class="question">
+            <h3>13. Coulomb's law is applicable for:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q13" value="A"> A) Point charges</label>
+                <label class="option"><input type="radio" name="q13" value="B"> B) Continuous charge distributions</label>
+                <label class="option"><input type="radio" name="q13" value="C"> C) Moving charges</label>
+                <label class="option"><input type="radio" name="q13" value="D"> D) All charges</label>
+            </div>
+            <button class="check-btn" data-question="13">Check Answer</button>
+            <div class="result" id="result-13"></div>
+            <div class="solution" id="solution-13">
+                <strong>Solution:</strong> F = kq1q2/r² for point charges; integrable for distributions.
+            </div>
+        </div>
+
+        <!-- Question 14 -->
+        <div class="question">
+            <h3>14. The equivalent capacitance of two capacitors in series is:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q14" value="A"> A) C1 + C2</label>
+                <label class="option"><input type="radio" name="q14" value="B"> B) C1C2/(C1 + C2)</label>
+                <label class="option"><input type="radio" name="q14" value="C"> C) C1C2</label>
+                <label class="option"><input type="radio" name="q14" value="D"> D) (C1 + C2)/2</label>
+            </div>
+            <button class="check-btn" data-question="14">Check Answer</button>
+            <div class="result" id="result-14"></div>
+            <div class="solution" id="solution-14">
+                <strong>Solution:</strong> 1/C_eq = 1/C1 + 1/C2.
+            </div>
+        </div>
+
+        <!-- Question 15 -->
+        <div class="question">
+            <h3>15. Drift velocity of electrons in a conductor is:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q15" value="A"> A) Very small</label>
+                <label class="option"><input type="radio" name="q15" value="B"> B) Equal to thermal velocity</label>
+                <label class="option"><input type

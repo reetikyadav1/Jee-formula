@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motion in a Plane - JEE Physics Practice</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Additional styles for MCQ layout, consistent with other pages */
+        .question {
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background-color: #111;
+            border-radius: 5px;
+        }
+        .question h3 {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        .option {
+            display: flex;
+            align-items: center;
+        }
+        .option input {
+            margin-right: 0.5rem;
+        }
+        .check-btn {
+            background-color: #fff;
+            color: #000;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .check-btn:hover {
+            background-color: #ccc;
+        }
+        .result {
+            margin-top: 1rem;
+            font-weight: 500;
+        }
+        .correct {
+            color: #4CAF50; /* Green for correct */
+        }
+        .wrong {
+            color: #f44336; /* Red for wrong */
+        }
+        .highlight {
+            background-color: #4CAF50; /* Highlight correct option */
+            padding: 0.2rem;
+            border-radius: 3px;
+        }
+        .solution {
+            margin-top: 1rem;
+            padding: 1rem;
+            background-color: #222;
+            border-radius: 5px;
+            display: none; /* Hidden by default */
+        }
+        @media (max-width: 768px) {
+            .options {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Motion in a Plane – JEE Practice</h1>
+
+        <!-- Question 1 -->
+        <div class="question">
+            <h3>1. A vector has:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q1" value="A"> A) Magnitude only</label>
+                <label class="option"><input type="radio" name="q1" value="B"> B) Direction only</label>
+                <label class="option"><input type="radio" name="q1" value="C"> C) Both magnitude and direction</label>
+                <label class="option"><input type="radio" name="q1" value="D"> D) Neither</label>
+            </div>
+            <button class="check-btn" data-question="1">Check Answer</button>
+            <div class="result" id="result-1"></div>
+            <div class="solution" id="solution-1">
+                <strong>Solution:</strong> Vectors have both magnitude and direction.
+            </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="question">
+            <h3>2. The resultant of two vectors A and B is minimum when:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q2" value="A"> A) θ = 0°</label>
+                <label class="option"><input type="radio" name="q2" value="B"> B) θ = 90°</label>
+                <label class="option"><input type="radio" name="q2" value="C"> C) θ = 180°</label>
+                <label class="option"><input type="radio" name="q2" value="D"> D) θ = 45°</label>
+            </div>
+            <button class="check-btn" data-question="2">Check Answer</button>
+            <div class="result" id="result-2"></div>
+            <div class="solution" id="solution-2">
+                <strong>Solution:</strong> R = √(A² + B² + 2AB cosθ), minimum at θ = 180°.
+            </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="question">
+            <h3>3. In projectile motion, horizontal velocity:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q3" value="A"> A) Increases</label>
+                <label class="option"><input type="radio" name="q3" value="B"> B) Decreases</label>
+                <label class="option"><input type="radio" name="q3" value="C"> C) Remains constant</label>
+                <label class="option"><input type="radio" name="q3" value="D"> D) Becomes zero</label>
+            </div>
+            <button class="check-btn" data-question="3">Check Answer</button>
+            <div class="result" id="result-3"></div>
+            <div class="solution" id="solution-3">
+                <strong>Solution:</strong> No horizontal acceleration, so constant.
+            </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="question">
+            <h3>4. Relative velocity of A w.r.t B is:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q4" value="A"> A) V_A - V_B</label>
+                <label class="option"><input type="radio" name="q4" value="B"> B) V_B - V_A</label>
+                <label class="option"><input type="radio" name="q4" value="C"> C) V_A + V_B</label>
+                <label class="option"><input type="radio" name="q4" value="D"> D) V_A × V_B</label>
+            </div>
+            <button class="check-btn" data-question="4">Check Answer</button>
+            <div class="result" id="result-4"></div>
+            <div class="solution" id="solution-4">
+                <strong>Solution:</strong> V_AB = V_A - V_B.
+            </div>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="question">
+            <h3>5. Time of flight in projectile motion is:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q5" value="A"> A) 2u sinθ / g</label>
+                <label class="option"><input type="radio" name="q5" value="B"> B) u sinθ / g</label>
+                <label class="option"><input type="radio" name="q5" value="C"> C) u cosθ / g</label>
+                <label class="option"><input type="radio" name="q5" value="D"> D) 2u cosθ / g</label>
+            </div>
+            <button class="check-btn" data-question="5">Check Answer</button>
+            <div class="result" id="result-5"></div>
+            <div class="solution" id="solution-5">
+                <strong>Solution:</strong> T = 2u sinθ / g.
+            </div>
+        </div>
+
+        <!-- Question 6 -->
+        <div class="question">
+            <h3>6. In circular motion, centripetal acceleration is:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q6" value="A"> A) v² / r</label>
+                <label class="option"><input type="radio" name="q6" value="B"> B) v / r</label>
+                <label class="option"><input type="radio" name="q6" value="C"> C) r / v</label>
+                <label class="option"><input type="radio" name="q6" value="D"> D) r² / v</label>
+            </div>
+            <button class="check-btn" data-question="6">Check Answer</button>
+            <div class="result" id="result-6"></div>
+            <div class="solution" id="solution-6">
+                <strong>Solution:</strong> a_c = v² / r towards center.
+            </div>
+        </div>
+
+        <!-- Question 7 -->
+        <div class="question">
+            <h3>7. The angle for maximum range in projectile is:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q7" value="A"> A) 30°</label>
+                <label class="option"><input type="radio" name="q7" value="B"> B) 45°</label>
+                <label class="option"><input type="radio" name="q7" value="C"> C) 60°</label>
+                <label class="option"><input type="radio" name="q7" value="D"> D) 90°</label>
+            </div>
+            <button class="check-btn" data-question="7">Check Answer</button>
+            <div class="result" id="result-7"></div>
+            <div class="solution" id="solution-7">
+                <strong>Solution:</strong> R_max at θ = 45°.
+            </div>
+        </div>
+
+        <!-- Question 8 -->
+        <div class="question">
+            <h3>8. Vector addition follows:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q8" value="A"> A) Triangle law</label>
+                <label class="option"><input type="radio" name="q8" value="B"> B) Parallelogram law</label>
+                <label class="option"><input type="radio" name="q8" value="C"> C) Both</label>
+                <label class="option"><input type="radio" name="q8" value="D"> D) Neither</label>
+            </div>
+            <button class="check-btn" data-question="8">Check Answer</button>
+            <div class="result" id="result-8"></div>
+            <div class="solution" id="solution-8">
+                <strong>Solution:</strong> Both laws apply for vector addition.
+            </div>
+        </div>
+
+        <!-- Question 9 -->
+        <div class="question">
+            <h3>9. In uniform circular motion, speed is:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q9" value="A"> A) Constant</label>
+                <label class="option"><input type="radio" name="q9" value="B"> B) Changing</label>
+                <label class="option"><input type="radio" name="q9" value="C"> C) Zero</label>
+                <label class="option"><input type="radio" name="q9" value="D"> D) Infinite</label>
+            </div>
+            <button class="check-btn" data-question="9">Check Answer</button>
+            <div class="result" id="result-9"></div>
+            <div class="solution" id="solution-9">
+                <strong>Solution:</strong> Speed constant, velocity changes due to direction.
+            </div>
+        </div>
+
+        <!-- Question 10 -->
+        <div class="question">
+            <h3>10. The horizontal range R =:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q10" value="A"> A) u² sin2θ / g</label>
+                <label class="option"><input type="radio" name="q10" value="B"> B) u² sinθ / g</label>
+                <label class="option"><input type="radio" name="q10" value="C"> C) u² cosθ / g</label>
+                <label class="option"><input type="radio" name="q10" value="D"> D) u² / g</label>
+            </div>
+            <button class="check-btn" data-question="10">Check Answer</button>
+            <div class="result" id="result-10"></div>
+            <div class="solution" id="solution-10">
+                <strong>Solution:</strong> R = (u² sin2θ) / g.
+            </div>
+        </div>
+
+        <!-- Question 11 -->
+        <div class="question">
+            <h3>11. A scalar has:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q11" value="A"> A) Magnitude only</label>
+                <label class="option"><input type="radio" name="q11" value="B"> B) Direction only</label>
+                <label class="option"><input type="radio" name="q11" value="C"> C) Both</label>
+                <label class="option"><input type="radio" name="q11" value="D"> D) Neither</label>
+            </div>
+            <button class="check-btn" data-question="11">Check Answer</button>
+            <div class="result" id="result-11"></div>
+            <div class="solution" id="solution-11">
+                <strong>Solution:</strong> Scalars have magnitude only.
+            </div>
+        </div>
+
+        <!-- Question 12 -->
+        <div class="question">
+            <h3>12. In projectile, maximum height H =:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q12" value="A"> A) u² sin²θ / (2g)</label>
+                <label class="option"><input type="radio" name="q12" value="B"> B) u² sinθ / g</label>
+                <label class="option"><input type="radio" name="q12" value="C"> C) u² cosθ / g</label>
+                <label class="option"><input type="radio" name="q12" value="D"> D) u² / (2g)</label>
+            </div>
+            <button class="check-btn" data-question="12">Check Answer</button>
+            <div class="result" id="result-12"></div>
+            <div class="solution" id="solution-12">
+                <strong>Solution:</strong> H = (u² sin²θ) / (2g).
+            </div>
+        </div>
+
+        <!-- Question 13 -->
+        <div class="question">
+            <h3>13. Relative velocity in 1D is:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q13" value="A"> A) Vector subtraction</label>
+                <label class="option"><input type="radio" name="q13" value="B"> B) Scalar subtraction</label>
+                <label class="option"><input type="radio" name="q13" value="C"> C) Addition</label>
+                <label class="option"><input type="radio" name="q13" value="D"> D) Multiplication</label>
+            </div>
+            <button class="check-btn" data-question="13">Check Answer</button>
+            <div class="result" id="result-13"></div>
+            <div class="solution" id="solution-13">
+                <strong>Solution:</strong> V_AB = V_A - V_B, vector.
+            </div>
+        </div>
+
+        <!-- Question 14 -->
+        <div class="question">
+            <h3>14. Angular velocity ω in circular motion is:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q14" value="A"> A) v / r</label>
+                <label class="option"><input type="radio" name="q14" value="B"> B) r / v</label>
+                <label class="option"><input type="radio" name="q14" value="C"> C) v² / r</label>
+                <label class="option"><input type="radio" name="q14" value="D"> D) r² / v</label>
+            </div>
+            <button class="check-btn" data-question="14">Check Answer</button>
+            <div class="result" id="result-14"></div>
+            <div class="solution" id="solution-14">
+                <strong>Solution:</strong> ω = v / r.
+            </div>
+        </div>
+
+        <!-- Question 15 -->
+        <div class="question">
+            <h3>15. The trajectory of projectile is:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q15" value="A">

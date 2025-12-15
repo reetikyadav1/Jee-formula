@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work, Energy & Power - JEE Physics Practice</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Additional styles for MCQ layout, consistent with other pages */
+        .question {
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background-color: #111;
+            border-radius: 5px;
+        }
+        .question h3 {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        .option {
+            display: flex;
+            align-items: center;
+        }
+        .option input {
+            margin-right: 0.5rem;
+        }
+        .check-btn {
+            background-color: #fff;
+            color: #000;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .check-btn:hover {
+            background-color: #ccc;
+        }
+        .result {
+            margin-top: 1rem;
+            font-weight: 500;
+        }
+        .correct {
+            color: #4CAF50; /* Green for correct */
+        }
+        .wrong {
+            color: #f44336; /* Red for wrong */
+        }
+        .highlight {
+            background-color: #4CAF50; /* Highlight correct option */
+            padding: 0.2rem;
+            border-radius: 3px;
+        }
+        .solution {
+            margin-top: 1rem;
+            padding: 1rem;
+            background-color: #222;
+            border-radius: 5px;
+            display: none; /* Hidden by default */
+        }
+        @media (max-width: 768px) {
+            .options {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Work, Energy & Power – JEE Practice</h1>
+
+        <!-- Question 1 -->
+        <div class="question">
+            <h3>1. Work done by a force is:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q1" value="A"> A) F × s</label>
+                <label class="option"><input type="radio" name="q1" value="B"> B) F · s</label>
+                <label class="option"><input type="radio" name="q1" value="C"> C) F / s</label>
+                <label class="option"><input type="radio" name="q1" value="D"> D) F + s</label>
+            </div>
+            <button class="check-btn" data-question="1">Check Answer</button>
+            <div class="result" id="result-1"></div>
+            <div class="solution" id="solution-1">
+                <strong>Solution:</strong> W = F · s cosθ, dot product.
+            </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="question">
+            <h3>2. Kinetic energy K =:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q2" value="A"> A) (1/2) mv</label>
+                <label class="option"><input type="radio" name="q2" value="B"> B) (1/2) mv²</label>
+                <label class="option"><input type="radio" name="q2" value="C"> C) mv²</label>
+                <label class="option"><input type="radio" name="q2" value="D"> D) (1/2) m²v</label>
+            </div>
+            <button class="check-btn" data-question="2">Check Answer</button>
+            <div class="result" id="result-2"></div>
+            <div class="solution" id="solution-2">
+                <strong>Solution:</strong> K = (1/2) mv².
+            </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="question">
+            <h3>3. Work-energy theorem states:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q3" value="A"> A) W = ΔK</label>
+                <label class="option"><input type="radio" name="q3" value="B"> B) W = ΔU</label>
+                <label class="option"><input type="radio" name="q3" value="C"> C) W = ΔE</label>
+                <label class="option"><input type="radio" name="q3" value="D"> D) W = 0</label>
+            </div>
+            <button class="check-btn" data-question="3">Check Answer</button>
+            <div class="result" id="result-3"></div>
+            <div class="solution" id="solution-3">
+                <strong>Solution:</strong> Net work = change in kinetic energy.
+            </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="question">
+            <h3>4. Conservative force:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q4" value="A"> A) Depends on path</label>
+                <label class="option"><input type="radio" name="q4" value="B"> B) Independent of path</label>
+                <label class="option"><input type="radio" name="q4" value="C"> C) Always zero</label>
+                <label class="option"><input type="radio" name="q4" value="D"> D) Dissipates energy</label>
+            </div>
+            <button class="check-btn" data-question="4">Check Answer</button>
+            <div class="result" id="result-4"></div>
+            <div class="solution" id="solution-4">
+                <strong>Solution:</strong> Work is path-independent.
+            </div>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="question">
+            <h3>5. Potential energy U for gravity is:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q5" value="A"> A) mgh</label>
+                <label class="option"><input type="radio" name="q5" value="B"> B) -mgh</label>
+                <label class="option"><input type="radio" name="q5" value="C"> C) (1/2) mgh</label>
+                <label class="option"><input type="radio" name="q5" value="D"> D) - (1/2) mgh</label>
+            </div>
+            <button class="check-btn" data-question="5">Check Answer</button>
+            <div class="result" id="result-5"></div>
+            <div class="solution" id="solution-5">
+                <strong>Solution:</strong> U = mgh (taking U=0 at h=0).
+            </div>
+        </div>
+
+        <!-- Question 6 -->
+        <div class="question">
+            <h3>6. Power P is:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q6" value="A"> A) Work / time</label>
+                <label class="option"><input type="radio" name="q6" value="B"> B) Force × velocity</label>
+                <label class="option"><input type="radio" name="q6" value="C"> C) Both A and B</label>
+                <label class="option"><input type="radio" name="q6" value="D"> D) Energy × time</label>
+            </div>
+            <button class="check-btn" data-question="6">Check Answer</button>
+            <div class="result" id="result-6"></div>
+            <div class="solution" id="solution-6">
+                <strong>Solution:</strong> P = W/t = F · v.
+            </div>
+        </div>
+
+        <!-- Question 7 -->
+        <div class="question">
+            <h3>7. Mechanical energy is conserved if:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q7" value="A"> A) Friction is present</label>
+                <label class="option"><input type="radio" name="q7" value="B"> B) Only conservative forces act</label>
+                <label class="option"><input type="radio" name="q7" value="C"> C) Kinetic energy changes</label>
+                <label class="option"><input type="radio" name="q7" value="D"> D) Potential energy is zero</label>
+            </div>
+            <button class="check-btn" data-question="7">Check Answer</button>
+            <div class="result" id="result-7"></div>
+            <div class="solution" id="solution-7">
+                <strong>Solution:</strong> K + U = constant for conservative forces.
+            </div>
+        </div>
+
+        <!-- Question 8 -->
+        <div class="question">
+            <h3>8. Elastic potential energy U =:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q8" value="A"> A) (1/2) k x</label>
+                <label class="option"><input type="radio" name="q8" value="B"> B) (1/2) k x²</label>
+                <label class="option"><input type="radio" name="q8" value="C"> C) k x²</label>
+                <label class="option"><input type="radio" name="q8" value="D"> D) (1/2) k / x</label>
+            </div>
+            <button class="check-btn" data-question="8">Check Answer</button>
+            <div class="result" id="result-8"></div>
+            <div class="solution" id="solution-8">
+                <strong>Solution:</strong> U = (1/2) k x² for spring.
+            </div>
+        </div>
+
+        <!-- Question 9 -->
+        <div class="question">
+            <h3>9. Average power is:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q9" value="A"> A) Total work / total time</label>
+                <label class="option"><input type="radio" name="q9" value="B"> B) Instantaneous power</label>
+                <label class="option"><input type="radio" name="q9" value="C"> C) Force / time</label>
+                <label class="option"><input type="radio" name="q9" value="D"> D) Energy / time</label>
+            </div>
+            <button class="check-btn" data-question="9">Check Answer</button>
+            <div class="result" id="result-9"></div>
+            <div class="solution" id="solution-9">
+                <strong>Solution:</strong> P_avg = W / t.
+            </div>
+        </div>
+
+        <!-- Question 10 -->
+        <div class="question">
+            <h3>10. Work done against gravity is:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q10" value="A"> A) mgh</label>
+                <label class="option"><input type="radio" name="q10" value="B"> B) -mgh</label>
+                <label class="option"><input type="radio" name="q10" value="C"> C) Zero</label>
+                <label class="option"><input type="radio" name="q10" value="D"> D) mg</label>
+            </div>
+            <button class="check-btn" data-question="10">Check Answer</button>
+            <div class="result" id="result-10"></div>
+            <div class="solution" id="solution-10">
+                <strong>Solution:</strong> W = mgh (lifting against gravity).
+            </div>
+        </div>
+
+        <!-- Question 11 -->
+        <div class="question">
+            <h3>11. Non-conservative force example:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q11" value="A"> A) Gravity</label>
+                <label class="option"><input type="radio" name="q11" value="B"> B) Spring force</label>
+                <label class="option"><input type="radio" name="q11" value="C"> C) Friction</label>
+                <label class="option"><input type="radio" name="q11" value="D"> D) Electric force</label>
+            </div>
+            <button class="check-btn" data-question="11">Check Answer</button>
+            <div class="result" id="result-11"></div>
+            <div class="solution" id="solution-11">
+                <strong>Solution:</strong> Friction dissipates energy, path-dependent.
+            </div>
+        </div>
+
+        <!-- Question 12 -->
+        <div class="question">
+            <h3>12. Total mechanical energy E =:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q12" value="A"> A) K + U</label>
+                <label class="option"><input type="radio" name="q12" value="B"> B) K - U</label>
+                <label class="option"><input type="radio" name="q12" value="C"> C) K × U</label>
+                <label class="option"><input type="radio" name="q12" value="D"> D) K / U</label>
+            </div>
+            <button class="check-btn" data-question="12">Check Answer</button>
+            <div class="result" id="result-12"></div>
+            <div class="solution" id="solution-12">
+                <strong>Solution:</strong> E = K + U.
+            </div>
+        </div>
+
+        <!-- Question 13 -->
+        <div class="question">
+            <h3>13. Power in rotational motion is:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q13" value="A"> A) τ ω</label>
+                <label class="option"><input type="radio" name="q13" value="B"> B) τ / ω</label>
+                <label class="option"><input type="radio" name="q13" value="C"> C) τ + ω</label>
+                <label class="option"><input type="radio" name="q13" value="D"> D) τ - ω</label>
+            </div>
+            <button class="check-btn" data-question="13">Check Answer</button>
+            <div class="result" id="result-13"></div>
+            <div class="solution" id="solution-13">
+                <strong>Solution:</strong> P = τ ω.
+            </div>
+        </div>
+
+        <!-- Question 14 -->
+        <div class="question">
+            <h3>14. Work done by variable force:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q14" value="A"> A) ∫ F dx</label>
+                <label class="option"><input type="radio" name="q14" value="B"> B) F × x</label>
+                <label class="option"><input type="radio" name="q14" value="C"> C) F / x</label>
+                <label class="option"><input type="radio" name="q14" value="D"> D) F + x</label>
+            </div>
+            <button class="check-btn" data-question="14">Check Answer</button>
+            <div class="result" id="result-14"></div>
+            <div class="solution" id="solution-14">
+                <strong>Solution:</strong> W = ∫ F · dx.
+            </div>
+        </div>
+
+        <!-- Question 15 -->
+        <div class="question">
+            <h3>15. Collision is elastic if:</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q15" value="A"> A) Kinetic energy conserved</label>
+                <label class="option"><input type="radio" name="q15" value="B"> B) Momentum conserved</label>
