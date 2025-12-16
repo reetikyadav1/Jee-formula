@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JEE Physics Numerical Mock – 2003</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .question { margin-bottom: 2rem; padding: 1rem; background-color: #111; border-radius: 5px; }
+        .question h3 { margin-bottom: 1rem; font-size: 1.1rem; }
+        .input-group { margin-bottom: 1rem; }
+        .input-group input { padding: 0.5rem; width: 100%; max-width: 200px; }
+        .check-btn { background-color: #fff; color: #000; border: none; padding: 0.5rem 1rem; border-radius: 5px; cursor: pointer; transition: background-color 0.3s; }
+        .check-btn:hover { background-color: #ccc; }
+        .result { margin-top: 1rem; font-weight: 500; }
+        .correct { color: #4CAF50; }
+        .wrong { color: #f44336; }
+        .solution { margin-top: 1rem; padding: 1rem; background-color: #222; border-radius: 5px; display: none; }
+        .timer { text-align: center; font-size: 1.5rem; margin-bottom: 2rem; color: #f44336; }
+        .submit-btn { display: block; width: 100%; padding: 1rem; background-color: #fff; color: #000; border: none; border-radius: 5px; font-size: 1.2rem; cursor: pointer; margin-top: 2rem; }
+        .submit-btn:hover { background-color: #ccc; }
+        .results { margin-top: 2rem; padding: 1rem; background-color: #222; border-radius: 5px; display: none; }
+        @media (max-width: 768px) { .input-group input { width: 100%; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>JEE Physics Numerical Mock – 2003</h1>
+        <p class="instructions">Total Questions: 15 | Time: 60 minutes | All questions are numerical answer type | Assume g = 10 m/s² unless stated | Calculators not allowed</p>
+        <div class="timer" id="timer">Time Left: 60:00</div>
+
+        <!-- Question 1 (Mechanics) -->
+        <div class="question">
+            <h3>1. A particle moves in a circle of radius 2 m with constant tangential acceleration 3 m/s². If initial speed is 4 m/s, find the time to complete one revolution. (Answer in seconds)</h3>
+            <div class="input-group"><input type="text" id="q1" placeholder="Enter answer"></div>
+            <button class="check-btn" data-question="1">Check Answer</button>
+            <div class="result" id="result-1"></div>
+            <div class="solution" id="solution-1">
+                <strong>Solution:</strong> Use v² = u² + 2a_s, but for tangential, a_t = dv/dt. Time for one rev: θ = 2π, ω = √(ω0² + 2αθ), t = (√(ω² - ω0²))/α. ω² = ω0² + 2αθ ⇒ ω² = 16 + 2*3*2π ⇒ ω² = 16 + 12π ⇒ ω = √(16 + 37.7) ≈ 6.8 rad/s. t = 2π / ω ≈ 0.92 s.
+            </div>
+        </div>
+
+        <!-- Question 2 (Mechanics) -->
+        <div class="question">
+            <h3>2. A block of mass 2 kg slides down a rough incline of 30° with μ = 0.2. Find the acceleration. (Answer in m/s²)</h3>
+            <div class="input-group"><input type="text" id="q2" placeholder="Enter answer"></div>
+            <button class="check-btn" data-question="2">Check Answer</button>
+            <div class="result" id="result-2"></div>
+            <div class="solution" id="solution-2">
+                <strong>Solution:</strong> mg sinθ - μ mg cosθ = ma ⇒ 20*0.5 - 0.2*20*0.866 = 2a ⇒ 10 - 3.46 = 2a ⇒ a = 3.27 m/s².
+            </div>
+        </div>
+
+        <!-- Question 3 (Mechanics) -->
+        <div class="question">
+            <h3>3. Two masses m1=1 kg, m2=2 kg connected by string over pulley. Find acceleration. (Answer in m/s²)</h3>
+            <div class="input-group"><input type="text" id="q3" placeholder="Enter answer"></div>
+            <button class="check-btn" data-question="3">Check Answer</button>
+            <div class="result" id="result-3"></div>
+            <div class="solution" id="solution-3">
+                <strong>Solution:</strong> (m2 - m1)g / (m1 + m2) = (2-1)*10 / (1+2) = 10/3 ≈ 3.33 m/s².
+            </div>
+        </div>
+
+        <!-- Question 4 (Mechanics) -->
+        <div class="question">
+            <h3>4. Projectile fired at 30° with speed 20 m/s. Find range. (Answer in meters)</h3>
+            <div class="input-group"><input type="text" id="q4" placeholder="Enter answer"></div>
+            <button class="check-btn" data-question="4">Check Answer</button>
+            <div class="result" id="result-4"></div>
+            <div class="solution" id="solution-4">
+                <strong>Solution:</strong> R = u² sin2θ / g = 400 * sin60 / 10 = 400 * 0.866 / 10 = 34.64 m.
+            </div>
+        </div>
+
+        <!-- Question 5 (Mechanics) -->
+        <div class="question">
+            <h3>5. A rod of length 1 m pivoted at end, falls from vertical. Find angular acceleration at start. (Answer in rad/s²)</h3>
+            <div class="input-group"><input type="text" id="q5" placeholder="Enter answer"></div>
+            <button class="check-btn" data-question="5">Check Answer</button>
+            <div class="result" id="result-5"></div>
+            <div class="solution" id="solution-5">
+                <strong>Solution:</strong> τ = I α, τ = mg (l/2) sinθ, I = ml²/3, α = (3g/2l) sinθ, at θ=0, α=0, but for small θ, α = 3g/(2l) ≈ 15 rad/s².
+            </div>
+        </div>
+
+        <!-- Question 6 (Mechanics) -->
+        <div class="question">
+            <h3>6. Elastic collision, m1=2 kg at 4 m/s, m2=1 kg at rest. Find v1 after collision. (Answer in m/s)</h3>
+            <div class="input-group"><input type="text" id="q6" placeholder="Enter answer"></div>
+            <button class="check-btn" data-question="6">Check Answer</button>
+            <div class="result" id="result-6"></div>
+            <div class="solution" id="solution-6">
+                <strong>Solution:</strong> v1 = (m1-m2)/(m1+m2) u1 = (2-1)/(2+1)*4 = 4/3 ≈ 1.33 m/s.
+            </div>
+        </div>
+
+        <!-- Question 7 (Thermo + KT) -->
+        <div class="question">
+            <h3>7. Ideal gas at 300 K, pressure doubled at constant volume. Find final T. (Answer in K)</h3>
+            <div class="input-group"><input type="text" id="q7" placeholder="Enter answer"></div>
+            <button class="check-btn" data-question="7">Check Answer</button>
+            <div class="result" id="result-7"></div>
+            <div class="solution" id="solution-7">
+                <strong>Solution:</strong> P/T = constant, 2P / T = P/300, T=600 K.
+            </div>
+        </div>
+
+        <!-- Question 8 (Thermo + KT) -->
+        <div class="question">
+            <h3>8. RMS speed of gas at 27°C. Find v_rms. (Answer in m/s, R=8.314, M=0.032 kg/mol for O2)</h3>
+            <div class="input-group"><input type="text" id="q8" placeholder="Enter answer"></div>
+            <button class="check-btn" data-question="8">Check Answer</button>
+            <div class="result" id="result-8"></div>
+            <div class="solution" id="solution-8">
+                <strong>Solution:</strong> v_rms = √(3RT/M) = √(3*8.314*300/0.032) ≈ 483 m/s.
+            </div>
+        </div>
+
+        <!-- Question 9 (Thermo + KT) -->
+        <div class="question">
+            <h3>9. Heat added to 1 mol monoatomic gas at constant volume, ΔU = 1500 J. Find ΔT. (Answer in K)</h3>
+            <div class="input-group"><input type="text" id="q9" placeholder="Enter answer"></div>
+            <button class="check-btn" data-question="9">Check Answer</button>
+            <div class="result" id="result-9"></div>
+            <div class="solution" id="solution-9">
+                <strong>Solution:</strong> ΔU = (3/2) nR ΔT, 1500 = (3/2)*8.314*ΔT, ΔT = 120.5 K.
+            </div>
+        </div>
+
+        <!-- Question 10 (Electrodynamics) -->
+        <div class="question">
+            <h3>10. Capacitor 10 μF charged to 100 V, connected to 5 μF. Find final V. (Answer in V)</h3>
+            <div class="input-group"><input type="text" id="q10" placeholder="Enter answer"></div>
+            <button class="check-btn" data-question="10">Check Answer</button>
+            <div class="result" id="result-10"></div>
+            <div class="solution" id="solution-10">
+                <strong>Solution:</strong> Q = C1 V1 = 10e-6 *100 = 1e-3 C. C_eq = 15e-6, V = Q/C_eq = 66.67 V.
+            </div>
+        </div>
+
+        <!-- Question 11 (Electrodynamics) -->
+        <div class="question">
+            <h3>11. Current in 2 Ω resistor in circuit with 10 V battery and 3 Ω in series. Find I. (Answer in A)</h3>
+            <div class="input-group"><input type="text" id="q11" placeholder="Enter answer"></div>
+            <button class="check-btn" data-question="11">Check Answer</button>
+            <div class="result" id="result-11"></div>
+            <div class="solution" id="solution-11">
+                <strong>Solution:</strong> R_total = 5 Ω, I = V/R = 10/5 = 2 A.
+            </div>
+        </div>
+
+        <!-- Question 12 (Electrodynamics) -->
+        <div class="question">
+            <h3>12. Magnetic field at center of loop radius 0.1 m, I=5 A. Find B. (Answer in T)</h3>
+            <div class="input-group"><input type="text" id="q12" placeholder="Enter answer"></div>
+            <button class="check-btn" data-question="12">Check Answer</button>
+            <div class="result" id="result-12"></div>
+            <div class="solution" id="solution-12">
+                <strong>Solution:</strong> B = μ0 I / (2r) = 4πe-7 *5 / 0.2 = 3.14e-5 T.
+            </div>
+        </div>
+
+        <!-- Question 13 (Electrodynamics) -->
+        <div class="question">
+            <h3>13. Force between two charges 1 μC each, 1 m apart. Find F. (Answer in N)</h3>
+            <div class="input-group"><input type="text" id="q13" placeholder="Enter answer"></div>
+            <button class="check-btn" data-question="13">Check Answer</button>
+            <div class="result" id="result-13"></div>
+            <div class="solution" id="solution-13">
+                <strong>Solution:</strong> F = k q1 q2 / r² = 9e9 *1e-12 /1 = 9e-3 N.
+            </div>
+        </div>
+
+        <!-- Question 14 (Modern Physics) -->
+        <div class="question">
+            <h3>14. Photon energy for λ=500 nm. Find E. (Answer in eV)</h3>
+            <div class="input-group"><input type="text" id="q14" placeholder="Enter answer"></div>
+            <button class="check-btn" data-question="14">Check Answer</button>
+            <div class="result" id="result-14"></div>
+            <div class="solution" id="solution-14">
+                <strong>Solution:</strong> E = hc/λ = 1240 / 500 = 2.48 eV.
+            </div>
+        </div>
+
+        <!-- Question 15 (Modern Physics) -->
+        <div class="question">
+            <h3>15. Stopping potential for metal φ=2 eV, λ=400 nm. Find V_s. (Answer in V)</h3>
+            <div class="input-group"><input type="text" id="q15" placeholder="Enter answer"></div>
+            <button class="check-btn" data-question="15">Check Answer</button>
+            <div class="result" id="result-15"></div>
+            <div class="solution" id="solution-15">
+                <strong>Solution:</strong> hc/λ = φ + eV_s, 1240/400 = 2 + V_s, 3.1 = 2 + V_s, V_s=1.1 V.
+            </div>
+        </div>
+
+        <button class="submit-btn" id="submit">Submit Test</button>
+        <div class="results" id="results"></div>
+    </div>
+
+    <script>
+        // Timer logic
+        let timeLeft = 3600; // 60 minutes
+        const timerEl = document.getElementById('timer');
+        const interval = setInterval(() => {
+            const minutes = Math.floor(timeLeft / 60);
+            const seconds = timeLeft % 60;
+            timerEl.textContent = `Time Left: ${minutes}:${seconds.toString().padStart(2, '0')}`;
+            if (timeLeft <= 0) {
+                clearInterval(interval);
+                submitTest();
+            }
+            timeLeft--;
+        }, 1000);
+
+        // Answer keys with tolerance
+        const answers = {
+            1: 0.92, 2: 3.27, 3: 3.33, 4: 34.64, 5: 15, 6: 1.33,
+            7: 600, 8: 483, 9: 120.5, 10: 66.67, 11: 2, 12: 0.0000314, 13: 0.009, 14: 2.48, 15: 1.1
+        };
+
+        // Check answer function
+        document.querySelectorAll('.check-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const q = btn.dataset.question;
+                const input = document.getElementById(`q${q}`).value;
+                const correct = answers[q];
+                const tolerance = correct * 0.01;
+                const resultEl = document.getElementById(`result-${q}`);
+                const solutionEl = document.getElementById(`solution-${q}`);
+                if (Math.abs(parseFloat(input) -

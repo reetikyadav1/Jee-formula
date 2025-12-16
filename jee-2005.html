@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JEE Physics Numerical Mock – 2005</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .question { margin-bottom: 2rem; padding: 1rem; background-color: #111; border-radius: 5px; }
+        .question h3 { margin-bottom: 1rem; font-size: 1.1rem; }
+        .input-group { margin-bottom: 1rem; }
+        .input-group input { padding: 0.5rem; width: 100%; max-width: 200px; }
+        .check-btn { background-color: #fff; color: #000; border: none; padding: 0.5rem 1rem; border-radius: 5px; cursor: pointer; transition: background-color 0.3s; }
+        .check-btn:hover { background-color: #ccc; }
+        .result { margin-top: 1rem; font-weight: 500; }
+        .correct { color: #4CAF50; }
+        .wrong { color: #f44336; }
+        .solution { margin-top: 1rem; padding: 1rem; background-color: #222; border-radius: 5px; display: none; }
+        .timer { text-align: center; font-size: 1.5rem; margin-bottom: 2rem; color: #f44336; }
+        .submit-btn { display: block; width: 100%; padding: 1rem; background-color: #fff; color: #000; border: none; border-radius: 5px; font-size: 1.2rem; cursor: pointer; margin-top: 2rem; }
+        .submit-btn:hover { background-color: #ccc; }
+        .results { margin-top: 2rem; padding: 1rem; background-color: #222; border-radius: 5px; display: none; }
+        @media (max-width: 768px) { .input-group input { width: 100%; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>JEE Physics Numerical Mock – 2005</h1>
+        <p class="instructions">Total Questions: 15 | Time: 60 minutes | All questions are numerical answer type | Assume g = 10 m/s² unless stated | Calculators not allowed</p>
+        <div class="timer" id="timer">Time Left: 60:00</div>
+
+        <!-- Question 1 (Mechanics) -->
+        <div class="question">
+            <h3>1. A particle moves with v = 2t² m/s. Find displacement in 2 s from rest. (Answer in meters)</h3>
+            <div class="input-group"><input type="text" id="q1" placeholder="Enter answer"></div>
+            <button class="check-btn" data-question="1">Check Answer</button>
+            <div class="result" id="result-1"></div>
+            <div class="solution" id="solution-1">
+                <strong>Solution:</strong> v = ds/dt = 2t², ds = 2t² dt, s = ∫0^2 2t² dt = (2/3)t³ from 0 to 2 = (2/3)*8 = 16/3 ≈ 5.33 m.
+            </div>
+        </div>
+
+        <!-- Question 2 (Mechanics) -->
+        <div class="question">
+            <h3>2. Spring k=200 N/m, mass 1 kg, find frequency. (Answer in Hz)</h3>
+            <div class="input-group"><input type="text" id="q2" placeholder="Enter answer"></div>
+            <button class="check-btn" data-question="2">Check Answer</button>
+            <div class="result" id="result-2"></div>
+            <div class="solution" id="solution-2">
+                <strong>Solution:</strong> f = 1/(2π) √(k/m) = 1/(2*3.14) √(200/1) ≈ 1/6.28 * 14.14 ≈ 2.25 Hz.
+            </div>
+        </div>
+
+        <!-- Question 3 (Mechanics) -->
+        <div class="question">
+            <h3>3. Atwood machine, m1=4 kg, m2=2 kg, find acceleration. (Answer in m/s²)</h3>
+            <div class="input-group"><input type="text" id="q3" placeholder="Enter answer"></div>
+            <button class="check-btn" data-question="3">Check Answer</button>
+            <div class="result" id="result-3"></div>
+            <div class="solution" id="solution-3">
+                <strong>Solution:</strong> a = (m1 - m2)g / (m1 + m2) = (4-2)*10 / (4+2) = 20/6 ≈ 3.33 m/s².
+            </div>
+        </div>
+
+        <!-- Question 4 (Mechanics) -->
+        <div class="question">
+            <h3>4. Ball dropped from 20 m, find velocity at 10 m. (Answer in m/s)</h3>
+            <div class="input-group"><input type="text" id="q4" placeholder="Enter answer"></div>
+            <button class="check-btn" data-question="4">Check Answer</button>
+            <div class="result" id="result-4"></div>
+            <div class="solution" id="solution-4">
+                <strong>Solution:</strong> v² = u² + 2gh = 0 + 2*10*10 = 200, v=14.14 m/s.
+            </div>
+        </div>
+
+        <!-- Question 5 (Mechanics) -->
+        <div class="question">
+            <h3>5. Torque on rod 2 m, force 10 N at 60° to rod. Find τ. (Answer in Nm)</h3>
+            <div class="input-group"><input type="text" id="q5" placeholder="Enter answer"></div>
+            <button class="check-btn" data-question="5">Check Answer</button>
+            <div class="result" id="result-5"></div>
+            <div class="solution" id="solution-5">
+                <strong>Solution:</strong> τ = r F sinθ = 2 * 10 * sin60 = 20 * 0.866 ≈ 17.32 Nm.
+            </div>
+        </div>
+
+        <!-- Question 6 (Mechanics) -->
+        <div class="question">
+            <h3>6. Work done by gravity on 5 kg block sliding 10 m down incline 30°. (Answer in J)</h3>
+            <div class="input-group"><input type="text" id="q6" placeholder="Enter answer"></div>
+            <button class="check-btn" data-question="6">Check Answer</button>
+            <div class="result" id="result-6"></div>
+            <div class="solution" id="solution-6">
+                <strong>Solution:</strong> W = mgh = 5*10*10*sin30 = 50*5 = 250 J.
+            </div>
+        </div>
+
+        <!-- Question 7 (Thermo + KT) -->
+        <div class="question">
+            <h3>7. Gas at 27°C, volume doubled at constant P, find T. (Answer in K)</h3>
+            <div class="input-group"><input type="text" id="q7" placeholder="Enter answer"></div>
+            <button class="check-btn" data-question="7">Check Answer</button>
+            <div class="result" id="result-7"></div>
+            <div class="solution" id="solution-7">
+                <strong>Solution:</strong> V/T = const, 2V / T = V/300, T=600 K.
+            </div>
+        </div>
+
+        <!-- Question 8 (Thermo + KT) -->
+        <div class="question">
+            <h3>8. Heat capacity at constant V for 2 mol monoatomic gas. (Answer in J/K)</h3>
+            <div class="input-group"><input type="text" id="q8" placeholder="Enter answer"></div>
+            <button class="check-btn" data-question="8">Check Answer</button>
+            <div class="result" id="result-8"></div>
+            <div class="solution" id="solution-8">
+                <strong>Solution:</strong> C_V = (3/2) nR = 1.5 * 2 * 8.314 ≈ 24.94 J/K.
+            </div>
+        </div>
+
+        <!-- Question 9 (Thermo + KT) -->
+        <div class="question">
+            <h3>9. Efficiency of Carnot engine T1=600 K, T2=300 K. (Answer as fraction)</h3>
+            <div class="input-group"><input type="text" id="q9" placeholder="Enter answer"></div>
+            <button class="check-btn" data-question="9">Check Answer</button>
+            <div class="result" id="result-9"></div>
+            <div class="solution" id="solution-9">
+                <strong>Solution:</strong> η = 1 - T2/T1 = 1 - 0.5 = 0.5.
+            </div>
+        </div>
+
+        <!-- Question 10 (Electrodynamics) -->
+        <div class="question">
+            <h3>10. Resistance 5 Ω, voltage 10 V, find power. (Answer in W)</h3>
+            <div class="input-group"><input type="text" id="q10" placeholder="Enter answer"></div>
+            <button class="check-btn" data-question="10">Check Answer</button>
+            <div class="result" id="result-10"></div>
+            <div class="solution" id="solution-10">
+                <strong>Solution:</strong> P = V²/R = 100/5 = 20 W.
+            </div>
+        </div>
+
+        <!-- Question 11 (Electrodynamics) -->
+        <div class="question">
+            <h3>11. Capacitor 4 μF charged to 20 V, energy stored. (Answer in μJ)</h3>
+            <div class="input-group"><input type="text" id="q11" placeholder="Enter answer"></div>
+            <button class="check-btn" data-question="11">Check Answer</button>
+            <div class="result" id="result-11"></div>
+            <div class="solution" id="solution-11">
+                <strong>Solution:</strong> U = (1/2) C V² = 0.5 * 4e-6 * 400 = 0.8e-3 J = 800 μJ.
+            </div>
+        </div>
+
+        <!-- Question 12 (Electrodynamics) -->
+        <div class="question">
+            <h3>12. Wire 1 m, B=0.5 T, I=2 A, force on wire. (Answer in N)</h3>
+            <div class="input-group"><input type="text" id="q12" placeholder="Enter answer"></div>
+            <button class="check-btn" data-question="12">Check Answer</button>
+            <div class="result" id="result-12"></div>
+            <div class="solution" id="solution-12">
+                <strong>Solution:</strong> F = I l B sin90 = 2*1*0.5 = 1 N.
+            </div>
+        </div>
+
+        <!-- Question 13 (Electrodynamics) -->
+        <div class="question">
+            <h3>13. Potential difference across 10 Ω in 20 V circuit. (Answer in V)</h3>
+            <div class="input-group"><input type="text" id="q13" placeholder="Enter answer"></div>
+            <button class="check-btn" data-question="13">Check Answer</button>
+            <div class="result" id="result-13"></div>
+            <div class="solution" id="solution-13">
+                <strong>Solution:</strong> V = IR, but need total R. Assuming series, V=20 V.
+            </div>
+        </div>
+
+        <!-- Question 14 (Modern Physics) -->
+        <div class="question">
+            <h3>14. Electron accelerated by 100 V, find speed. (Answer in m/s)</h3>
+            <div class="input-group"><input type="text" id="q14" placeholder="Enter answer"></div>
+            <button class="check-btn" data-question="14">Check Answer</button>
+            <div class="result" id="result-14"></div>
+            <div class="solution" id="solution-14">
+                <strong>Solution:</strong> (1/2)mv² = eV, v = √(2eV/m) ≈ √(2*1.6e-19*100 / 9.1e-31) ≈ 5.9e6 m/s.
+            </div>
+        </div>
+
+        <!-- Question 15 (Modern Physics) -->
+        <div class="question">
+            <h3>15. Radioactive decay, N0=1000, λ=0.1 s^-1, N after 2 s. (Answer)</h3>
+            <div class="input-group"><input type="text" id="q15" placeholder="Enter answer"></div>
+            <button class="check-btn" data-question="15">Check Answer</button>
+            <div class="result" id="result-15"></div>
+            <div class="solution" id="solution-15">
+                <strong>Solution:</strong> N = N0 e^-λt = 1000 * e^-0.2 ≈ 818.
+            </div>
+        </div>
+
+        <button class="submit-btn" id="submit">Submit Test</button>
+        <div class="results" id="results"></div>
+    </div>
+
+    <script>
+        // Timer logic
+        let timeLeft = 3600; // 60 minutes
+        const timerEl = document.getElementById('timer');
+        const interval = setInterval(() => {
+            const minutes = Math.floor(timeLeft / 60);
+            const seconds = timeLeft % 60;
+            timerEl.textContent = `Time Left: ${minutes}:${seconds.toString().padStart(2, '0')}`;
+            if (timeLeft <= 0) {
+                clearInterval(interval);
+                submitTest();
+            }
+            timeLeft--;
+        }, 1000);
+
+        // Answer keys with tolerance
+        const answers = {
+            1: 5.33, 2: 2.25, 3: 3.33, 4: 14.14, 5: 17.32, 6: 250,
+            7: 600, 8: 24.94, 9: 0.5, 10: 20, 11: 800, 12: 1, 13: 20, 14: 5900000, 15: 818
+        };
+
+        // Check answer function
+        document.querySelectorAll('.check-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const q = btn.dataset.question;
+                const input = document.getElementById(`q${q}`).value;
+                const correct = answers[q];
+                const tolerance = correct * 0.01;
+                const resultEl = document.getElementById(`result-${q}`);
+                const solutionEl = document.getElementById(`solution-${q}`);
+                if (Math.abs(parseFloat(input) - correct) <= tolerance) {
+                    resultEl.innerHTML = '<span class="correct">Correct Answer</span>';
+                } else {
+                    resultEl.innerHTML = `<span class="wrong">Incorrect Answer. Correct: ${correct}</span>`;
+                }
+                solutionEl.style.display = 'block';
+            });
+        });
+
+        // Submit test function
+        function submitTest() {
+            clearInterval(interval);
+            let score = 0;
+            let attempted = 0;
+            for (let i = 1; i <= 15; i++) {
+                const input = document.getElementById(`q${i}`).value;
+                if (input) {
+                    attempted++;
+                    const correct = answers[i];
+                    const tolerance = correct * 0.01;
+                    if (Math.abs(parseFloat(input) - correct) <= tolerance) {
+                        score++;
+                    }
+                }
+                document.getElementById(`q${i}`).disabled = true;
+                document.querySelector(`[data-question="${i}"]`).disabled = true;
+                document.getElementById(`solution-${i}`).style.display = 'block';
+            }
+            document.getElementById('results').innerHTML = `<h
